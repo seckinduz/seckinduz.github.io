@@ -1,0 +1,47 @@
+
+:root{--bg:#0b0f17;--panel:#121826;--line:#243049;--text:#e8edf6;--muted:#9fb0cc;--accent:#ffb347;--accent2:#5cc8ff}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent2)}a:hover{color:var(--accent)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+header.site{border-bottom:1px solid var(--line);background:var(--panel)}
+header.site .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+header.site .brand{font-weight:700;letter-spacing:.02em;color:var(--text);text-decoration:none}
+header.site nav a{margin-left:14px;text-decoration:none;color:var(--muted)}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:#1a1100;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:15px}
+.btn.alt{background:transparent;color:var(--accent2);border:1px solid var(--accent2)}
+.btn:hover{filter:brightness(1.1);color:#1a1100}.btn.alt:hover{color:var(--accent)}
+.hero{padding:28px 0 12px}
+.hero h1{margin:0 0 6px;font-size:clamp(24px,4vw,38px);line-height:1.2}
+.hero p{margin:0;color:var(--muted);max-width:70ch}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
+.toolbar input{flex:1;min-width:200px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--text);font-size:15px}
+.seg button{padding:9px 14px;border:1px solid var(--line);background:var(--panel);color:var(--muted);cursor:pointer;font-size:14px}
+.seg button:first-child{border-radius:10px 0 0 10px}.seg button:last-child{border-radius:0 10px 10px 0}
+.seg button[aria-pressed=true]{background:var(--accent);color:#1a1100;font-weight:700;border-color:var(--accent)}
+#map-el{height:68vh;min-height:420px;border:1px solid var(--line);border-radius:14px}
+.layout{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:900px){.layout{grid-template-columns:2.2fr 1fr}}
+.list{max-height:68vh;overflow:auto;border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:6px}
+.list button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);color:var(--text);padding:10px;cursor:pointer;font-size:14px}
+.list button small{display:block;color:var(--muted)}.list button:hover,.list button:focus{background:#19223a}
+.leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.85) contrast(.95) saturate(.8)}
+.leaflet-container{background:#0b0f17}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--panel);color:var(--text)}
+.leaflet-popup-content{margin:12px 14px;max-width:290px}
+.pop h3{margin:0 0 2px;font-size:18px}.pop .c{color:var(--muted);font-size:13px;margin-bottom:8px}
+.pop p{margin:6px 0;font-size:14px;line-height:1.5}.pop .row{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.pop .btn{padding:7px 11px;font-size:13px}
+.pop .tip{border-left:3px solid var(--accent);padding-left:8px;color:var(--muted)}
+section.block{padding:26px 0}section.block h2{margin:0 0 10px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}
+.card h3{margin:0 0 6px;font-size:17px}.card p{margin:0 0 10px;color:var(--muted);font-size:14px}
+.cta{background:linear-gradient(135deg,#1b2540,#121826);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+article.post{max-width:760px;margin:0 auto;padding:24px 16px 40px}
+article.post h1{font-size:clamp(26px,4vw,38px);line-height:1.2;margin:8px 0 12px}
+article.post h2{margin:28px 0 8px}
+article.post .meta{color:var(--muted);font-size:14px}
+table.facts{border-collapse:collapse;width:100%;margin:14px 0}table.facts td{border:1px solid var(--line);padding:8px 10px}table.facts td:first-child{color:var(--muted);width:35%}
+.note{color:var(--muted);font-size:13px}
+footer.site{border-top:1px solid var(--line);margin-top:30px;padding:20px 0;color:var(--muted);font-size:14px}
