@@ -12,7 +12,8 @@ window.PLACES = [
   "t_es": "Empieza en la oficina de turismo y sigue la línea a pie o en bici. Es llano, tranquilo y se combina fácilmente con un día en Breda o Tilburg.",
   "k_en": "comfortable walking shoes, a city bike lock, a small camera.",
   "k_es": "zapatillas cómodas, candado de bici, cámara pequeña.",
-  "article": "baarle-nassau-border-town"
+  "article": "baarle-nassau-border-town",
+  "cat": "borders"
  },
  {
   "id": "campione-d-italia",
@@ -27,7 +28,8 @@ window.PLACES = [
   "t_es": "Excursión fácil desde Lugano. Lleva documentación: cruzas una frontera casi sin notarlo.",
   "k_en": "passport or ID card, a light rain jacket, a power bank.",
   "k_es": "pasaporte o DNI, chubasquero ligero, batería externa.",
-  "article": "campione-ditalia-italian-enclave-in-switzerland"
+  "article": "campione-ditalia-italian-enclave-in-switzerland",
+  "cat": "borders"
  },
  {
   "id": "point-roberts-washington",
@@ -42,7 +44,8 @@ window.PLACES = [
   "t_es": "Lleva pasaportes para todos y consulta los tiempos de espera en la frontera. Los fines de semana de verano suele haber cola.",
   "k_en": "passports, a paper road map, a picnic blanket.",
   "k_es": "pasaportes, mapa de carretera en papel, manta de picnic.",
-  "article": "point-roberts-washington"
+  "article": "point-roberts-washington",
+  "cat": "borders"
  },
  {
   "id": "llivia",
@@ -57,7 +60,8 @@ window.PLACES = [
   "t_es": "Se llega desde Puigcerdà en pocos minutos. Sube a la iglesia vieja y a la torre fortificada para ver el valle de la Cerdanya.",
   "k_en": "layers for mountain weather, a day pack, a reusable bottle.",
   "k_es": "ropa por capas para la montaña, mochila pequeña, botella reutilizable.",
-  "article": "llivia-the-spanish-town-inside-france"
+  "article": "llivia-the-spanish-town-inside-france",
+  "cat": "borders"
  },
  {
   "id": "busingen-am-hochrhein",
@@ -72,7 +76,8 @@ window.PLACES = [
   "t_es": "Combínalo con las cataratas del Rin cerca de Schaffhausen. Un barco por el Rin es la forma tranquila de ver la zona.",
   "k_en": "a rain shell, a small day pack, a compact umbrella.",
   "k_es": "chubasquero, mochila pequeña, paraguas compacto.",
-  "article": "busingen-am-hochrhein-german-village-in-switzerland"
+  "article": "busingen-am-hochrhein-german-village-in-switzerland",
+  "cat": "borders"
  },
  {
   "id": "kaliningrad",
@@ -87,7 +92,8 @@ window.PLACES = [
   "t_es": "Las normas de entrada a Rusia cambian a menudo, así que consulta los requisitos oficiales con mucha antelacion.",
   "k_en": "a travel insurance checklist, a document folder, a phrasebook.",
   "k_es": "lista de seguro de viaje, carpeta de documentos, guía de frases.",
-  "article": "kaliningrad-russian-exclave-on-the-baltic"
+  "article": "kaliningrad-russian-exclave-on-the-baltic",
+  "cat": "borders"
  },
  {
   "id": "northwest-angle-minnesota",
@@ -102,7 +108,8 @@ window.PLACES = [
   "t_es": "Se llega en barco por el lago, o en coche por Manitoba y notificando el cruce. La pesca es el motivo principal de la visita.",
   "k_en": "polarized sunglasses, a warm hat, insect repellent.",
   "k_es": "gafas polarizadas, gorro, repelente de insectos.",
-  "article": "northwest-angle-minnesota-the-us-exclave-in-canada"
+  "article": "northwest-angle-minnesota-the-us-exclave-in-canada",
+  "cat": "borders"
  },
  {
   "id": "cooch-behar-enclaves",
@@ -117,7 +124,8 @@ window.PLACES = [
   "t_es": "Un guía local es imprescindible, y también el respeto hacia quienes viven allí. Es vida cotidiana, no un parque temático.",
   "k_en": "light breathable clothes, a water filter bottle, a small notebook.",
   "k_es": "ropa ligera y transpirable, botella con filtro, libreta pequeña.",
-  "article": "cooch-behar-enclaves-india-bangladesh-border"
+  "article": "cooch-behar-enclaves-india-bangladesh-border",
+  "cat": "borders"
  },
  {
   "id": "bir-tawil",
@@ -132,7 +140,8 @@ window.PLACES = [
   "t_es": "Casi inalcanzable: no hay servicios y el acceso requiere permisos. Lo sensato es viajar desde el sillón.",
   "k_en": "a good atlas, a desert documentary, a world map poster.",
   "k_es": "un buen atlas, un documental del desierto, un póster de mapamundi.",
-  "article": "bir-tawil-the-land-no-country-claims"
+  "article": "bir-tawil-the-land-no-country-claims",
+  "cat": "borders"
  },
  {
   "id": "ceuta",
@@ -147,7 +156,8 @@ window.PLACES = [
   "t_es": "El ferry desde Algeciras es la forma fácil de llegar. Recorre las Murallas Reales y el puerto antiguo.",
   "k_en": "a passport, a sun hat, a compact camera.",
   "k_es": "pasaporte, sombrero, cámara compacta.",
-  "article": "ceuta-spanish-city-in-africa"
+  "article": "ceuta-spanish-city-in-africa",
+  "cat": "borders"
  },
  {
   "id": "gibraltar",
@@ -162,7 +172,8 @@ window.PLACES = [
   "t_es": "Sube pronto en teleférico. Guarda la comida: los macacos saben lo que es una bolsa.",
   "k_en": "a secure daypack, sun cream, a light jacket for the wind.",
   "k_es": "mochila con cierre, crema solar, chaqueta ligera para el viento.",
-  "article": "gibraltar-the-rock-and-its-runway"
+  "article": "gibraltar-the-rock-and-its-runway",
+  "cat": "borders"
  },
  {
   "id": "kolmanskop",
@@ -177,7 +188,8 @@ window.PLACES = [
   "t_es": "Visitalo con luz de mañana para las fotos y compra el permiso en la entrada. Alójate cerca de Lüderitz.",
   "k_en": "a scarf for sand, a camera lens cloth, sturdy shoes.",
   "k_es": "pañuelo para la arena, paño para el objetivo, calzado resistente.",
-  "article": "kolmanskop-namibia-ghost-town-in-the-desert"
+  "article": "kolmanskop-namibia-ghost-town-in-the-desert",
+  "cat": "nature"
  },
  {
   "id": "giethoorn",
@@ -192,7 +204,8 @@ window.PLACES = [
   "t_es": "Ve temprano o tarde para evitar multitudes. Alquila un barco eléctrico o camina por los carriles bici.",
   "k_en": "a light rain jacket, a bike helmet, a waterproof phone case.",
   "k_es": "chubasquero ligero, casco de bici, funda impermeable para el móvil.",
-  "article": "giethoorn-the-dutch-village-without-roads"
+  "article": "giethoorn-the-dutch-village-without-roads",
+  "cat": "engineering"
  },
  {
   "id": "point-nemo",
@@ -207,7 +220,8 @@ window.PLACES = [
   "t_es": "No se puede visitar sin más. Síguelo en un mapa y lee sobre las misiones espaciales que terminan allí.",
   "k_en": "a globe, a star chart, a book about space exploration.",
   "k_es": "un globo terráqueo, un mapa estelar, un libro sobre exploración espacial.",
-  "article": "point-nemo-the-most-remote-place-in-the-ocean"
+  "article": "point-nemo-the-most-remote-place-in-the-ocean",
+  "cat": "nature"
  },
  {
   "id": "afsluitdijk",
@@ -222,7 +236,8 @@ window.PLACES = [
   "t_es": "Para en el centro de visitantes del mirador del Wadden y recorre todo el dique en bici o en coche con el viento a favor.",
   "k_en": "windproof jacket, a bike repair kit, sunglasses.",
   "k_es": "chaqueta cortavientos, kit de reparación de bici, gafas de sol.",
-  "article": "afsluitdijk-the-dam-that-created-a-lake"
+  "article": "afsluitdijk-the-dam-that-created-a-lake",
+  "cat": "engineering"
  },
  {
   "id": "maeslantkering",
@@ -237,7 +252,8 @@ window.PLACES = [
   "t_es": "El centro de visitantes explica cómo funciona. Una prueba de cierre programada es un espectáculo si logras coincidir.",
   "k_en": "binoculars, a notebook, comfortable shoes.",
   "k_es": "prismáticos, libreta, calzado cómodo.",
-  "article": "maeslantkering-storm-barrier"
+  "article": "maeslantkering-storm-barrier",
+  "cat": "engineering"
  },
  {
   "id": "kinderdijk",
@@ -252,7 +268,8 @@ window.PLACES = [
   "t_es": "Alquila una bici y recorre los caminos del dique. El amanecer y el atardecer son los momentos más tranquilos.",
   "k_en": "a light jacket, a camera, a refillable bottle.",
   "k_es": "chaqueta ligera, cámara, botella rellenable.",
-  "article": "kinderdijk-windmills"
+  "article": "kinderdijk-windmills",
+  "cat": "engineering"
  },
  {
   "id": "utrecht-centraal-bicycle-garage",
@@ -267,7 +284,8 @@ window.PLACES = [
   "t_es": "Llega en tren: el aparcamiento esta justo bajo la estacion. Después recorre los canales antiguos.",
   "k_en": "a sturdy bike lock, a rain poncho, a small basket.",
   "k_es": "un candado resistente, un poncho de lluvia, una cesta pequeña.",
-  "article": "utrecht-centraal-bicycle-parking-garage"
+  "article": "utrecht-centraal-bicycle-parking-garage",
+  "cat": "engineering"
  },
  {
   "id": "moynaq",
@@ -282,7 +300,8 @@ window.PLACES = [
   "t_es": "Planifica una excursión guiada por tierra desde Nukus y lleva agua y protección solar.",
   "k_en": "a wide-brim hat, sun cream, a headscarf for dust.",
   "k_es": "sombrero de ala ancha, crema solar, pañuelo para el polvo.",
-  "article": "moynaq-the-ship-graveyard-of-the-aral-sea"
+  "article": "moynaq-the-ship-graveyard-of-the-aral-sea",
+  "cat": "nature"
  },
  {
   "id": "socotra",
@@ -297,7 +316,8 @@ window.PLACES = [
   "t_es": "El acceso es limitado y las condiciones cambian, así que consulta vuelos y seguridad antes de planificar.",
   "k_en": "a field guide to plants, a wide-brim hat, sturdy sandals.",
   "k_es": "una guía de plantas, un sombrero de ala ancha, sandalias resistentes.",
-  "article": "socotra-dragon-blood-trees"
+  "article": "socotra-dragon-blood-trees",
+  "cat": "nature"
  },
  {
   "id": "lake-hillier",
@@ -312,7 +332,8 @@ window.PLACES = [
   "t_es": "Los vuelos panorámicos desde Esperance son la forma práctica de verlo y la luz es mejor en días despejados.",
   "k_en": "polarized sunglasses, a camera with a zoom, sun cream.",
   "k_es": "gafas polarizadas, cámara con zoom, crema solar.",
-  "article": "lake-hillier-the-pink-lake-of-western-australia"
+  "article": "lake-hillier-the-pink-lake-of-western-australia",
+  "cat": "nature"
  },
  {
   "id": "dallol",
@@ -327,7 +348,8 @@ window.PLACES = [
   "t_es": "Visitalo solo con una excursión organizada y guías locales. La seguridad y el calor extremo hacen poco aconsejable viajar por libre.",
   "k_en": "a long-sleeve sun shirt, a wide-brim hat, an electrolyte supply.",
   "k_es": "camisa de manga larga, sombrero de ala ancha, sales de rehidratación.",
-  "article": "dallol-the-colorful-volcanic-landscape-of-ethiopia"
+  "article": "dallol-the-colorful-volcanic-landscape-of-ethiopia",
+  "cat": "nature"
  },
  {
   "id": "darvaza-gas-crater",
@@ -342,7 +364,8 @@ window.PLACES = [
   "t_es": "Ve de noche, cuando el fuego es más espectacular. Mantente a distancia segura y sigue a tu guía.",
   "k_en": "a warm jacket for cold desert nights, a headlamp, a camera tripod.",
   "k_es": "chaqueta para las frías noches del desierto, frontal, trípode.",
-  "article": "darvaza-gas-crater"
+  "article": "darvaza-gas-crater",
+  "cat": "nature"
  },
  {
   "id": "tristan-da-cunha",
@@ -357,7 +380,8 @@ window.PLACES = [
   "t_es": "No hay aeropuerto. Los barcos salen de Ciudad del Cabo y tardan una semana aproximadamente, con el tiempo mandando.",
   "k_en": "seasickness remedies, a warm waterproof jacket, a good book.",
   "k_es": "remedios contra el mareo, chaqueta impermeable abrigada, un buen libro.",
-  "article": "tristan-da-cunha-the-most-remote-inhabited-island"
+  "article": "tristan-da-cunha-the-most-remote-inhabited-island",
+  "cat": "nature"
  },
  {
   "id": "sealand",
@@ -372,7 +396,9 @@ window.PLACES = [
   "t_es": "No se puede visitar sin más. La costa de Suffolk cerca de Felixstowe da contexto y la historia se lee muy bien en un día de lluvia.",
   "k_en": "a nautical chart, a paperback history, binoculars.",
   "k_es": "una carta náutica, un libro de historia, prismáticos.",
-  "article": "sealand-the-micronation-on-a-sea-fort"
+  "article": "sealand-the-micronation-on-a-sea-fort",
+  "cat": "borders"
  }
 ];
 window.LINKS = {"gumEN": "https://seckinspire7.gumroad.com/l/25-weirdest-borders", "gumES": "https://seckinspire7.gumroad.com/l/25-fronteras-extranas", "beacons": "https://beacons.ai/seckinduz"};
+window.CATS = [{"id": "borders", "en": "Weird Borders & Enclaves", "es": "Fronteras y Enclaves Extraños", "icon": "🗺️", "color": "#ffb347"}, {"id": "engineering", "en": "Mega Engineering", "es": "Mega Ingeniería", "icon": "🏗️", "color": "#5cc8ff"}, {"id": "nature", "en": "Extreme Nature & Wonders", "es": "Naturaleza Extrema y Maravillas", "icon": "🌋", "color": "#7ddc8a"}];
