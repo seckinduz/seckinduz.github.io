@@ -1,6 +1,6 @@
 /* v2.5 PWA: kabuk onbellegi. Harita karolari/API (cross-origin) onbelleklenmez. Yollar goreli (Capacitor/alan adi tasimasina uygun). */
-const CACHE = "sd-shell-v26";
-const SHELL = ["./", "./index.html", "./manifest.json", "./v2/css/style.css?v=26", "./v2/js/data.js?v=26", "./v2/js/articles.js?v=26", "./v2/js/i18n.js?v=26", "./v2/js/i18n2.js?v=26", "./v2/js/i18n3.js?v=26", "./v2/js/places_i18n.js?v=26", "./v2/js/local.js?v=26", "./v2/js/app.js?v=26", "./v2/img/logo-96.png", "./v2/img/icon-192.png"];
+const CACHE = "sd-shell-v27";
+const SHELL = ["./", "./index.html", "./manifest.json", "./v2/css/style.css?v=27", "./v2/js/data.js?v=27", "./v2/js/articles.js?v=27", "./v2/js/i18n.js?v=27", "./v2/js/i18n2.js?v=27", "./v2/js/i18n3.js?v=27", "./v2/js/places_i18n.js?v=27", "./v2/js/local.js?v=27", "./v2/js/app.js?v=27", "./v2/img/logo-96.png", "./v2/img/icon-192.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => Promise.all(SHELL.map(u => c.add(u).catch(() => {})))).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", e => {

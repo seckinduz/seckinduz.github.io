@@ -162,6 +162,7 @@ function fillDossier(p, vid) {
   if (v && v.id && released(v)) box.innerHTML = `<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/${v.id}?rel=0&playsinline=1" title="${esc(v.title)}" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
   else if (v) box.innerHTML = `<div class="pre">▶ ${t("premiere")}<br><b>${v.date} · 17:58 CET</b><br>${esc(v.title)}</div>`;
   else box.innerHTML = `<div class="pre">◎ ${esc(p.name)}</div>`;
+  const dc = $("#dcomment"); if (v && v.id && released(v)) { dc.href = ytUrl(v.id); dc.textContent = "💬 " + t("ytcomment"); dc.hidden = false; } else dc.hidden = true;
   const a = $("#dart"); a.href = p.extra ? "https://www.youtube.com/@seckinduz" : `./articles/${p.slug}.html`; a.textContent = t("article") + " →"; a.target = "_blank";
   $("#dstamp").textContent = "✦ " + (S.visited[p.slug] ? "✓ " : "") + t("stamp");
   $("#dbucket").textContent = (S.bucket[p.slug] !== undefined ? "★ " : "☆ ") + t("addbucket");
@@ -206,9 +207,10 @@ function renderRadar() {
   $$("#rlist [data-m]").forEach(b => b.onclick = () => { const v = VIDEOS.find(x => x.id === b.dataset.m); showOnMap(placeOfVideo(v), v.id); });
   $$("#rtabs button").forEach(b => b.classList.toggle("on", b.dataset.r === S.radar));
 }
+const ytUrl = id => `https://www.youtube.com/watch?v=${id}`;
 function playVideo(id) {
   const v = VIDEOS.find(x => x.id === id);
-  $("#vbody").innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0&autoplay=1&playsinline=1" title="${esc(v.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><p class="vt">${esc(v.title)}</p><button class="btn amber" id="vm">⌖ ${t("showonmap")}</button>`;
+  $("#vbody").innerHTML = `<div class="vframe"><iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0&autoplay=1&playsinline=1" title="${esc(v.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><p class="vt">${esc(v.title)}</p><div class="vact"><button class="btn amber" id="vm" type="button">⌖ ${t("showonmap")}</button><a class="btn" id="vc" href="${ytUrl(id)}" target="_blank" rel="noopener">💬 ${t("ytcomment")}</a></div>`;
   $("#vmodal").hidden = false; $("#vm").onclick = () => { closeVideo(); showOnMap(placeOfVideo(v), id); };
 }
 function closeVideo() { $("#vmodal").hidden = true; $("#vbody").innerHTML = ""; }
