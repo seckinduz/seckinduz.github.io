@@ -1,0 +1,26 @@
+{
+ "name": "Weirdest Borders & Hidden Places \u2014 Expedition Portal",
+ "short_name": "Weird Borders",
+ "description": "3D globe, local explorer and stories about the world's weirdest borders.",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "any",
+ "background_color": "#05080F",
+ "theme_color": "#05080F",
+ "lang": "en",
+ "icons": [
+  {
+   "src": "./v2/img/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any maskable"
+  },
+  {
+   "src": "./v2/img/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
+}

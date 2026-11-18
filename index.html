@@ -3,91 +3,162 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Weirdest Borders & Hidden Places — 3D Expedition Command Center | seckinduz</title>
-<meta name="description" content="Interactive 3D globe of the world's 25 weirdest borders and hidden places: enclaves, exclaves, ghost towns and engineering marvels, with short videos, articles and a border quiz.">
-<link rel="canonical" href="https://seckinduz.github.io/">
-<link rel="alternate" hreflang="x-default" href="https://seckinduz.github.io/">
-<link rel="alternate" hreflang="en" href="https://seckinduz.github.io/?lang=en">
-<link rel="alternate" hreflang="tr" href="https://seckinduz.github.io/?lang=tr">
-<link rel="alternate" hreflang="de" href="https://seckinduz.github.io/?lang=de">
-<link rel="alternate" hreflang="nl" href="https://seckinduz.github.io/?lang=nl">
-<link rel="alternate" hreflang="es" href="https://seckinduz.github.io/?lang=es">
-<link rel="alternate" hreflang="fr" href="https://seckinduz.github.io/?lang=fr">
-<link rel="alternate" hreflang="pt" href="https://seckinduz.github.io/?lang=pt">
-<link rel="alternate" hreflang="ru" href="https://seckinduz.github.io/?lang=ru">
-<link rel="alternate" hreflang="ar" href="https://seckinduz.github.io/?lang=ar">
-<link rel="alternate" hreflang="hi" href="https://seckinduz.github.io/?lang=hi">
-<link rel="alternate" hreflang="ja" href="https://seckinduz.github.io/?lang=ja">
+<title>Weirdest Borders & Hidden Places — Dark Editorial Map & Discovery Portal | seckinduz</title>
+<meta name="description" content="Interactive 3D globe and editorial portal for the world's 25 weirdest borders and hidden places: enclaves, exclaves, ghost towns and engineering marvels, with videos, articles, web stories and a border quiz.">
+<link rel="canonical" href="https://seckinduz.com/">
+<link rel="alternate" hreflang="x-default" href="https://seckinduz.com/">
+<link rel="alternate" hreflang="en" href="https://seckinduz.com/?lang=en">
+<link rel="alternate" hreflang="tr" href="https://seckinduz.com/?lang=tr">
+<link rel="alternate" hreflang="de" href="https://seckinduz.com/?lang=de">
+<link rel="alternate" hreflang="nl" href="https://seckinduz.com/?lang=nl">
+<link rel="alternate" hreflang="es" href="https://seckinduz.com/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://seckinduz.com/?lang=fr">
+<link rel="alternate" hreflang="pt" href="https://seckinduz.com/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://seckinduz.com/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://seckinduz.com/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://seckinduz.com/?lang=hi">
+<link rel="alternate" hreflang="ja" href="https://seckinduz.com/?lang=ja">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Weirdest Borders & Hidden Places — 3D Expedition Command Center">
-<meta property="og:description" content="Fly across a 3D globe to the world's strangest borders. Videos, articles, quiz and explorer passport.">
-<meta property="og:url" content="https://seckinduz.github.io/"><meta property="og:image" content="https://seckinduz.github.io/img/logo.png">
+<meta property="og:title" content="Weirdest Borders & Hidden Places — Map & Discovery Portal">
+<meta property="og:description" content="Fly across a 3D globe to the world's strangest borders. Videos, 25 articles, web stories, quiz and explorer passport.">
+<meta property="og:url" content="https://seckinduz.com/">
+<meta property="og:image" content="https://seckinduz.com/img/logo.png">
 <meta name="theme-color" content="#05080F">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%2305080F%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2710%27 fill=%27none%27 stroke=%27%2300F0FF%27 stroke-width=%272.5%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%273.5%27 fill=%27%23FF9E00%27/%3E%3C/svg%3E">
-<link rel="stylesheet" href="v2/css/style.css">
+<link rel="icon" href="./v2/img/logo-96.png"><link rel="apple-touch-icon" href="./v2/img/icon-192.png"><link rel="manifest" href="./manifest.json">
+<link rel="stylesheet" href="./v2/css/style.css">
 <script type="application/ld+json" id="ld"></script>
 </head>
 <body>
-<div id="map" role="application" aria-label="3D globe"></div>
-<div class="scan" aria-hidden="true"></div>
 
-<header class="topbar">
-  <div class="brand"><span class="logo">◎</span><div><h1 id="h1">Expedition Command Center</h1><p id="sub" class="subline"></p></div></div>
-  <div class="live"><i></i><span data-i="live">LIVE</span><span id="coord" class="mono">00.0000°, 000.0000°</span></div>
-  <label class="langsel"><span class="sr">Language</span><select id="lang" aria-label="Language"></select></label>
+<header class="site" id="top">
+  <div class="site-in">
+    <a class="logo" href="#top" aria-label="seckinduz"><img src="./v2/img/logo-96.png" alt="" width="34" height="34"><span>seckin<b>duz</b></span></a>
+    <nav class="mainnav" id="mainnav" aria-label="Main">
+      <a href="#map" data-i="nav_map"></a><a href="#articles" data-i="nav_articles"></a><a href="#stories" data-i="nav_stories"></a><a href="#quiz-sec" data-i="nav_quiz"></a><a href="#ebook" data-i="nav_ebook"></a>
+    </nav>
+    <div class="site-r">
+      <label class="langsel"><span class="sr">Language</span><select id="lang" aria-label="Language"></select></label>
+      <button class="btn gbtn" id="authBtn" type="button"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.6l6.7-6.7C35.6 2.4 30.2 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.8 6.1C12.3 13.6 17.6 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.6 5.9c4.4-4.1 7-10.1 7-17.6z"/><path fill="#FBBC05" d="M10.4 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.9-4.7l-7.8-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.8-6.1z"/><path fill="#34A853" d="M24 48c6.2 0 11.4-2 15.2-5.5l-7.6-5.9c-2.1 1.4-4.8 2.3-7.6 2.3-6.4 0-11.7-4.1-13.6-9.8l-7.8 6.1C6.5 42.6 14.6 48 24 48z"/></svg><span id="authTxt" data-i="passbtn"></span></button>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
 </header>
 
-<aside id="left" class="panel left" aria-label="Command panel">
-  <button class="grab" id="grabL" aria-label="Toggle panel"></button>
-  <section class="card auth" id="auth"></section>
-  <section class="card rings">
-    <svg id="rings" viewBox="0 0 120 120" aria-hidden="true"></svg>
-    <div class="ringtxt"><b id="ringN">0</b><span>/25</span><small data-i="explored"></small></div>
-  </section>
-  <section class="card">
-    <div class="search"><input id="q" type="search" autocomplete="off" data-ph="search" aria-label="Search"><div id="sres" class="sres" hidden></div></div>
-    <div class="chips" id="chips"></div>
-    <button class="btn amber" id="tp"><span data-i="teleport"></span></button>
-    <p id="near" class="mono small"></p>
-  </section>
-  <nav class="tabs" id="tabs">
-    <button data-t="places" class="on" data-i="places"></button><button data-t="passport" data-i="passport"></button><button data-t="bucket" data-i="bucket"></button><button data-t="board" data-i="board"></button>
-  </nav>
-  <section class="card list" id="tabbody"></section>
-  <button class="btn cyan wide" id="quizBtn"><span data-i="quiz"></span> ▸</button>
-  <footer class="foot small mono"><a href="https://www.youtube.com/@seckinduz" rel="noopener">YouTube</a> · <a href="https://beacons.ai/seckinduz" rel="noopener">E-Book</a> · <a href="quiz.html">Quiz</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy</a> · © seckinduz</footer>
-</aside>
+<main id="main">
+<section class="hero">
+  <div class="wrap">
+    <span class="pill"><i></i><span id="pillTxt" class="mono"></span></span>
+    <h1 id="h1" data-i="hero_h"></h1>
+    <p class="lead" id="lead" data-i="hero_p"></p>
+    <div class="cta">
+      <button class="btn amber big" id="tp" type="button">✨ <span data-i="teleport"></span></button>
+      <button class="btn cyan big" id="quizBtn" type="button">🧠 <span data-i="quiz"></span></button>
+    </div>
+  </div>
+</section>
 
-<aside id="dossier" class="panel right" aria-label="Location dossier" hidden>
-  <button class="x" id="dx" aria-label="Close">×</button>
-  <div class="dhead"><span id="dcat" class="chip"></span><h2 id="dname"></h2><p id="dsub" class="mono small"></p></div>
-  <div id="dvideo" class="video"></div>
-  <p id="dtag" class="tag"></p><p id="dsum" class="small" style="margin:-4px 0 10px;line-height:1.5"></p>
-  <div class="row"><a class="btn cyan" id="dart" rel="noopener"></a><button class="btn" id="dstamp"></button><button class="btn" id="dbucket"></button></div>
-  <section class="book" aria-label="E-Book">
-    <div class="b3d"><div class="face"><b>25</b><span>WEIRDEST<br>BORDERS</span></div></div>
-    <div><h3 data-i="ebook"></h3><a class="btn amber" href="https://beacons.ai/seckinduz" rel="noopener" data-i="ebookcta"></a><p id="packNote" class="small"></p></div>
-  </section>
-</aside>
+<section class="wrap-wide" id="map" aria-label="3D map">
+  <div class="stage" id="stage">
+    <div id="mapEl" role="application" aria-label="3D globe"></div>
+    <div class="scan" aria-hidden="true"></div>
+    <div class="msearch">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" autocomplete="off" data-ph="msearch" aria-label="Search"><kbd>Ctrl K</kbd>
+      <div id="sres" class="sres" hidden></div>
+    </div>
+    <div class="layers" id="layers" role="group" aria-label="Map layers">
+      <button data-l="dark" data-i="l_dark"></button><button data-l="sat" class="on" data-i="l_sat"></button><button data-l="terrain" data-i="l_terrain"></button>
+    </div>
+    <button class="fsbtn btn" id="fs" type="button" aria-label="Fullscreen">⛶ <span id="fsTxt" data-i="fullscreen"></span></button>
+    <div class="live"><i></i><span data-i="live"></span> <span id="coord" class="mono">00.0000°, 000.0000°</span></div>
+    <button class="btn locbtn" id="locBtn" type="button">📍 <span data-i="local_h"></span></button>
+    <aside id="local" class="local" aria-label="Local Explorer"><button class="x" id="lmin" aria-label="Close">×</button><div id="localBody"></div></aside>
+    <aside id="dossier" class="dossier" aria-label="Location dossier" hidden>
+      <button class="x" id="dx" aria-label="Close">×</button>
+      <div class="dhead"><span id="dcat" class="chip"></span><h2 id="dname"></h2><p id="dsub" class="mono small"></p></div>
+      <div id="dvideo" class="video"></div>
+      <p id="dtag" class="tag"></p><p id="dsum" class="small dsum"></p>
+      <div class="row"><a class="btn cyan" id="dart" rel="noopener"></a><button class="btn" id="dstamp" type="button"></button><button class="btn" id="dbucket" type="button"></button></div>
+    </aside>
+  </div>
+</section>
 
-<aside id="radar" class="radar" aria-label="YouTube Radar">
-  <header><b data-i="radar"></b><div class="rt"><button data-r="new" class="on" data-i="fresh"></button><button data-r="top" data-i="top"></button></div></header>
-  <ul id="rlist"></ul>
-</aside>
+<section class="block" id="videos">
+  <div class="wrap">
+    <div class="sh"><div><span class="eyebrow mono">A · YOUTUBE @seckinduz</span><h2 data-i="radar_h"></h2><p data-i="radar_p"></p></div>
+      <div class="tabs2" id="rtabs"><button data-r="new" class="on" data-i="fresh"></button><button data-r="top" data-i="top"></button></div></div>
+    <div class="vgrid" id="rlist"></div>
+  </div>
+</section>
+
+<section class="block alt" id="articles">
+  <div class="wrap">
+    <div class="sh"><div><span class="eyebrow mono">B · MAGAZINE</span><h2 data-i="art_h"></h2><p data-i="art_p"></p></div>
+      <div class="tabs2" id="atabs"></div></div>
+    <div class="agrid" id="agrid"></div>
+    <div class="amore" id="amore"></div>
+  </div>
+</section>
+
+<section class="block" id="stories">
+  <div class="wrap">
+    <div class="sh"><div><span class="eyebrow mono">C · WEB STORIES</span><h2 data-i="story_h"></h2><p data-i="story_p"></p></div></div>
+    <div class="sgrid" id="sgrid"></div>
+  </div>
+</section>
+
+<section class="block alt" id="quiz-sec">
+  <div class="wrap two">
+    <div class="quizcard">
+      <span class="eyebrow mono">C · BORDER QUIZ</span><h2 data-i="quiz_h"></h2><p data-i="quiz_p"></p>
+      <button class="btn cyan big" id="quizBtn2" type="button">🧠 <span data-i="start"></span> ▸</button>
+    </div>
+    <div class="passcard" id="passport">
+      <span class="eyebrow mono">C · PASSPORT</span><h2 data-i="pass_h"></h2><p data-i="pass_p"></p>
+      <div class="auth" id="auth"></div>
+      <h3 class="benh" data-i="ben_h"></h3>
+      <ul class="bens"><li data-i="ben1"></li><li data-i="ben2"></li><li data-i="ben3"></li><li data-i="ben4"></li><li data-i="ben5"></li></ul>
+      <div class="rings"><svg id="rings" viewBox="0 0 120 120" aria-hidden="true"></svg><div class="ringtxt"><b id="ringN">0</b><span>/25</span><small data-i="explored"></small></div></div>
+      <nav class="tabs2 ptabs" id="tabs"><button data-t="passport" class="on" data-i="passport"></button><button data-t="bucket" data-i="bucket"></button><button data-t="board" data-i="board"></button></nav>
+      <div class="list" id="tabbody"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="ebook">
+  <div class="wrap">
+    <div class="ebook">
+      <div class="covers"><div class="b3d"><div class="face"><b>25</b><span>WEIRDEST<br>BORDERS</span><em>EN</em></div></div><div class="b3d es"><div class="face"><b>25</b><span>FRONTERAS<br>EXTRAÑAS</span><em>ES</em></div></div></div>
+      <div class="ebtxt"><span class="eyebrow mono">D · E-BOOK</span><h2 data-i="ebook_h"></h2><p data-i="ebook_p"></p>
+        <div class="row"><a class="btn amber big" href="https://seckinspire7.gumroad.com/l/25-weirdest-borders" rel="noopener" data-i="ebook_en"></a><a class="btn big" href="https://seckinspire7.gumroad.com/l/25-fronteras-extranas" rel="noopener" data-i="ebook_es"></a><a class="btn big" href="https://beacons.ai/seckinduz" rel="noopener"><span data-i="allch"></span> ↗</a></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p><a href="https://www.youtube.com/@seckinduz" rel="noopener">YouTube</a> · <a href="https://beacons.ai/seckinduz" rel="noopener">beacons.ai/seckinduz</a> · <a href="./about.html" data-i="about"></a> · <a href="./privacy.html" data-i="privacy"></a> · <a href="./contact.html" data-i="contact"></a></p>
+    <p class="small" data-i="foot"></p><p class="small">© seckinduz</p>
+  </div>
+</footer>
 
 <div id="quiz" class="modal" hidden role="dialog" aria-modal="true"><div class="mbox"><button class="x" id="qx" aria-label="Close">×</button><div id="qbody"></div></div></div>
+<div id="vmodal" class="modal" hidden role="dialog" aria-modal="true"><div class="mbox vbox"><button class="x" id="vx" aria-label="Close">×</button><div id="vbody"></div></div></div>
 <div id="toast" class="toast" hidden></div>
-
 <noscript><p>Enable JavaScript for the interactive 3D globe.</p></noscript>
-<nav id="seo" class="sr" aria-label="All 25 places"><h2>Weirdest Borders &amp; Hidden Places</h2><ul><li><a href="https://seckinduz.github.io/articles/baarle-nassau-border-town.html">Baarle-Nassau — Belgium / Netherlands</a></li><li><a href="https://seckinduz.github.io/articles/point-roberts-washington.html">Point Roberts — United States</a></li><li><a href="https://seckinduz.github.io/articles/maeslantkering-storm-barrier.html">Maeslantkering — Netherlands</a></li><li><a href="https://seckinduz.github.io/articles/kinderdijk-windmills.html">Kinderdijk — Netherlands</a></li><li><a href="https://seckinduz.github.io/articles/socotra-dragon-blood-trees.html">Socotra — Yemen</a></li><li><a href="https://seckinduz.github.io/articles/darvaza-gas-crater.html">Darvaza Gas Crater — Turkmenistan</a></li><li><a href="https://seckinduz.github.io/articles/campione-ditalia-italian-enclave-in-switzerland.html">Campione d'Italia — Italy (inside Switzerland)</a></li><li><a href="https://seckinduz.github.io/articles/busingen-am-hochrhein-german-village-in-switzerland.html">Büsingen am Hochrhein — Germany (inside Switzerland)</a></li><li><a href="https://seckinduz.github.io/articles/kaliningrad-russian-exclave-on-the-baltic.html">Kaliningrad — Russia</a></li><li><a href="https://seckinduz.github.io/articles/northwest-angle-minnesota-the-us-exclave-in-canada.html">Northwest Angle — United States</a></li><li><a href="https://seckinduz.github.io/articles/cooch-behar-enclaves-india-bangladesh-border.html">Cooch Behar Enclaves — India / Bangladesh</a></li><li><a href="https://seckinduz.github.io/articles/bir-tawil-the-land-no-country-claims.html">Bir Tawil — Egypt / Sudan</a></li><li><a href="https://seckinduz.github.io/articles/ceuta-spanish-city-in-africa.html">Ceuta — Spain (in Africa)</a></li><li><a href="https://seckinduz.github.io/articles/gibraltar-the-rock-and-its-runway.html">Gibraltar — United Kingdom (overseas territory)</a></li><li><a href="https://seckinduz.github.io/articles/kolmanskop-namibia-ghost-town-in-the-desert.html">Kolmanskop — Namibia</a></li><li><a href="https://seckinduz.github.io/articles/giethoorn-the-dutch-village-without-roads.html">Giethoorn — Netherlands</a></li><li><a href="https://seckinduz.github.io/articles/point-nemo-the-most-remote-place-in-the-ocean.html">Point Nemo — South Pacific Ocean</a></li><li><a href="https://seckinduz.github.io/articles/afsluitdijk-the-dam-that-created-a-lake.html">Afsluitdijk — Netherlands</a></li><li><a href="https://seckinduz.github.io/articles/utrecht-centraal-bicycle-parking-garage.html">Utrecht Centraal Bike Garage — Netherlands</a></li><li><a href="https://seckinduz.github.io/articles/moynaq-the-ship-graveyard-of-the-aral-sea.html">Moynaq — Uzbekistan</a></li><li><a href="https://seckinduz.github.io/articles/lake-hillier-the-pink-lake-of-western-australia.html">Lake Hillier — Australia</a></li><li><a href="https://seckinduz.github.io/articles/dallol-the-colorful-volcanic-landscape-of-ethiopia.html">Dallol — Ethiopia</a></li><li><a href="https://seckinduz.github.io/articles/tristan-da-cunha-the-most-remote-inhabited-island.html">Tristan da Cunha — British Overseas Territory</a></li><li><a href="https://seckinduz.github.io/articles/sealand-the-micronation-on-a-sea-fort.html">Sealand — Off the coast of England</a></li><li><a href="https://seckinduz.github.io/articles/llivia-the-spanish-town-inside-france.html">Llívia — Spain (inside France)</a></li></ul></nav>
+<nav id="seo" class="sr" aria-label="All 25 places"><h2>Weirdest Borders &amp; Hidden Places</h2><ul><li><a href="https://seckinduz.com/articles/baarle-nassau-border-town.html">Baarle-Nassau — Belgium / Netherlands</a></li><li><a href="https://seckinduz.com/articles/point-roberts-washington.html">Point Roberts — United States</a></li><li><a href="https://seckinduz.com/articles/maeslantkering-storm-barrier.html">Maeslantkering — Netherlands</a></li><li><a href="https://seckinduz.com/articles/kinderdijk-windmills.html">Kinderdijk — Netherlands</a></li><li><a href="https://seckinduz.com/articles/socotra-dragon-blood-trees.html">Socotra — Yemen</a></li><li><a href="https://seckinduz.com/articles/darvaza-gas-crater.html">Darvaza Gas Crater — Turkmenistan</a></li><li><a href="https://seckinduz.com/articles/campione-ditalia-italian-enclave-in-switzerland.html">Campione d'Italia — Italy (inside Switzerland)</a></li><li><a href="https://seckinduz.com/articles/busingen-am-hochrhein-german-village-in-switzerland.html">Büsingen am Hochrhein — Germany (inside Switzerland)</a></li><li><a href="https://seckinduz.com/articles/kaliningrad-russian-exclave-on-the-baltic.html">Kaliningrad — Russia</a></li><li><a href="https://seckinduz.com/articles/northwest-angle-minnesota-the-us-exclave-in-canada.html">Northwest Angle — United States</a></li><li><a href="https://seckinduz.com/articles/cooch-behar-enclaves-india-bangladesh-border.html">Cooch Behar Enclaves — India / Bangladesh</a></li><li><a href="https://seckinduz.com/articles/bir-tawil-the-land-no-country-claims.html">Bir Tawil — Egypt / Sudan</a></li><li><a href="https://seckinduz.com/articles/ceuta-spanish-city-in-africa.html">Ceuta — Spain (in Africa)</a></li><li><a href="https://seckinduz.com/articles/gibraltar-the-rock-and-its-runway.html">Gibraltar — United Kingdom (overseas territory)</a></li><li><a href="https://seckinduz.com/articles/kolmanskop-namibia-ghost-town-in-the-desert.html">Kolmanskop — Namibia</a></li><li><a href="https://seckinduz.com/articles/giethoorn-the-dutch-village-without-roads.html">Giethoorn — Netherlands</a></li><li><a href="https://seckinduz.com/articles/point-nemo-the-most-remote-place-in-the-ocean.html">Point Nemo — South Pacific Ocean</a></li><li><a href="https://seckinduz.com/articles/afsluitdijk-the-dam-that-created-a-lake.html">Afsluitdijk — Netherlands</a></li><li><a href="https://seckinduz.com/articles/utrecht-centraal-bicycle-parking-garage.html">Utrecht Centraal Bike Garage — Netherlands</a></li><li><a href="https://seckinduz.com/articles/moynaq-the-ship-graveyard-of-the-aral-sea.html">Moynaq — Uzbekistan</a></li><li><a href="https://seckinduz.com/articles/lake-hillier-the-pink-lake-of-western-australia.html">Lake Hillier — Australia</a></li><li><a href="https://seckinduz.com/articles/dallol-the-colorful-volcanic-landscape-of-ethiopia.html">Dallol — Ethiopia</a></li><li><a href="https://seckinduz.com/articles/tristan-da-cunha-the-most-remote-inhabited-island.html">Tristan da Cunha — British Overseas Territory</a></li><li><a href="https://seckinduz.com/articles/sealand-the-micronation-on-a-sea-fort.html">Sealand — Off the coast of England</a></li><li><a href="https://seckinduz.com/articles/llivia-the-spanish-town-inside-france.html">Llívia — Spain (inside France)</a></li></ul></nav>
 <script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
-<script src="v2/js/data.js"></script>
-<script src="v2/js/i18n.js"></script>
-<script src="v2/js/places_i18n.js"></script>
-<script src="v2/js/app.js"></script>
+<script src="./v2/js/data.js"></script>
+<script src="./v2/js/articles.js"></script>
+<script src="./v2/js/i18n.js"></script>
+<script src="./v2/js/i18n2.js"></script>
+<script src="./v2/js/i18n3.js"></script>
+<script src="./v2/js/places_i18n.js"></script>
+<script src="./v2/js/local.js"></script>
+<script src="./v2/js/app.js"></script>
 </body>
 </html>

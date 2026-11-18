@@ -31,7 +31,7 @@ window.PLACES = [
 window.VIDEOS = [
  {id:"FqmVlOQ9DkQ",slug:"baarle-nassau-border-town",title:"This Shop Door Is in Two Countries at Once",date:"2026-11-18"},
  {id:"X7FwERRbRiU",slug:"point-roberts-washington",title:"The US Town You Can Only Drive To Through Canada",date:"2026-11-19"},
- {id:"GVnxWaOW_YY",slug:null,lat:50.58,lon:6.2,title:"Belgium's Tiny Railway That Splits Germany Into 5 Pieces (Vennbahn)",date:"2026-11-20"},
+ {id:"GVnxWaOW_YY",slug:null,name:"Vennbahn",lat:50.58,lon:6.2,title:"Belgium's Tiny Railway That Splits Germany Into 5 Pieces (Vennbahn)",date:"2026-11-20"},
  {id:"fR_ptqeI7Ao",slug:"socotra-dragon-blood-trees",title:"The Alien Island Where a Third of the Plants Exist Nowhere Else",date:"2026-11-21"},
  {id:"zLjFiJLUWuc",slug:"darvaza-gas-crater",title:"The Desert Crater That Has Been Burning for Decades",date:"2026-11-22"},
  {id:"2T7fUv_ptNY",slug:"bir-tawil-the-land-no-country-claims",title:"Bir Tawil: The Land No Country Wants",date:"2026-11-23"},
