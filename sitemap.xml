@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://seckinduz.github.io/</loc><lastmod>2026-11-16</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://seckinduz.github.io/</loc><lastmod>2026-11-18</lastmod><changefreq>daily</changefreq><priority>1.0</priority><xhtml:link rel="alternate" hreflang="en" href="https://seckinduz.github.io/?lang=en"/><xhtml:link rel="alternate" hreflang="tr" href="https://seckinduz.github.io/?lang=tr"/><xhtml:link rel="alternate" hreflang="de" href="https://seckinduz.github.io/?lang=de"/><xhtml:link rel="alternate" hreflang="nl" href="https://seckinduz.github.io/?lang=nl"/><xhtml:link rel="alternate" hreflang="es" href="https://seckinduz.github.io/?lang=es"/><xhtml:link rel="alternate" hreflang="fr" href="https://seckinduz.github.io/?lang=fr"/><xhtml:link rel="alternate" hreflang="pt" href="https://seckinduz.github.io/?lang=pt"/><xhtml:link rel="alternate" hreflang="ru" href="https://seckinduz.github.io/?lang=ru"/><xhtml:link rel="alternate" hreflang="ar" href="https://seckinduz.github.io/?lang=ar"/><xhtml:link rel="alternate" hreflang="hi" href="https://seckinduz.github.io/?lang=hi"/><xhtml:link rel="alternate" hreflang="ja" href="https://seckinduz.github.io/?lang=ja"/><xhtml:link rel="alternate" hreflang="x-default" href="https://seckinduz.github.io/"/></url>
   <url><loc>https://seckinduz.github.io/quiz.html</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://seckinduz.github.io/about.html</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://seckinduz.github.io/privacy.html</loc><lastmod>2026-11-16</lastmod></url>
