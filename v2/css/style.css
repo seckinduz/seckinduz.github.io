@@ -222,3 +222,4 @@ body.labels .pin span,.pin:hover span{display:block}
 }
 @media (max-width:359px){.vgrid{grid-template-columns:1fr}.hero h1{font-size:1.9rem}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.notrail{margin:8px 0;padding:8px 10px;border:1px dashed var(--line);border-radius:10px;line-height:1.4}.notrail a{font-size:1.1rem;margin-inline-start:6px;font-weight:700}

@@ -60,16 +60,47 @@ const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/";
 const SAT_SRC = { type: "raster", tileSize: 256, maxzoom: 17, attribution: "Imagery © Esri, Maxar, Earthstar Geographics", tiles: [ESRI + "World_Imagery/MapServer/tile/{z}/{y}/{x}"] };
 const LBL_SRC = { type: "raster", tileSize: 256, maxzoom: 14, tiles: [ESRI + "Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"] };
 const DEM_SRC = { type: "raster-dem", tileSize: 256, maxzoom: 14, encoding: "terrarium", attribution: "Terrain © Mapzen / AWS", tiles: ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"] };
-const STYLES = {
-  dark: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
-  sat: { version: 8, projection: { type: "globe" }, sources: { sat: SAT_SRC, lbl: LBL_SRC },
-    layers: [{ id: "bg", type: "background", paint: { "background-color": "#05080F" } }, { id: "sat", type: "raster", source: "sat", paint: { "raster-brightness-max": 0.78, "raster-saturation": -0.15, "raster-contrast": 0.12 } }, { id: "lbl", type: "raster", source: "lbl", minzoom: 3 }] },
-  terrain: { version: 8, projection: { type: "globe" }, sources: { sat: SAT_SRC, lbl: LBL_SRC, dem: DEM_SRC, hs: DEM_SRC },
-    layers: [{ id: "bg", type: "background", paint: { "background-color": "#05080F" } }, { id: "sat", type: "raster", source: "sat", paint: { "raster-brightness-max": 0.78, "raster-saturation": -0.15, "raster-contrast": 0.12 } },
-      { id: "hs", type: "hillshade", source: "hs", paint: { "hillshade-exaggeration": 0.55, "hillshade-shadow-color": "#000", "hillshade-highlight-color": "#fff" } }, { id: "lbl", type: "raster", source: "lbl", minzoom: 3 }] }
-};
+const CLARITY_SRC = { type: "raster", tileSize: 256, maxzoom: 17, attribution: "Imagery © Esri, Maxar, Earthstar Geographics", tiles: ["https://clarity.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"] };
+const IMG_PAINT = { "raster-brightness-max": 0.78, "raster-saturation": -0.15, "raster-contrast": 0.12 };
+const STYLES = { dark: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json", sat: null, terrain: null };
+/* Carto (Protomaps semali) vektor katmanlarindan yol / dere / sinir / isim bindirmesi: her zoomda keskin */
+function vecOverlay(cj) {
+  const out = [];
+  cj.layers.forEach(l => {
+    if (l.source !== "protomaps") return;
+    const sl = l["source-layer"], id = l.id, c = JSON.parse(JSON.stringify(l)); delete c.metadata;
+    if (l.type === "line") {
+      if (sl === "roads") {
+        if (/aeroway|rail|ferry|runway|taxiway|tunnel/.test(id)) return;
+        const casing = /case/.test(id); let col = "rgba(255,255,255,.85)";
+        if (/mot/.test(id)) col = "#ffb347"; else if (/trunk/.test(id)) col = "#ffc766"; else if (/pri/.test(id)) col = "#ffffff"; else if (/sec/.test(id)) col = "#eaf7ff"; else if (/path/.test(id)) col = "#7ffbff";
+        c.paint = { "line-color": casing ? "rgba(3,8,15,.75)" : col };
+        if (l.paint && l.paint["line-width"]) c.paint["line-width"] = l.paint["line-width"];
+        if (!casing && l.paint && l.paint["line-dasharray"]) c.paint["line-dasharray"] = l.paint["line-dasharray"];
+        if (!casing && !/path/.test(id)) c.paint["line-opacity"] = 0.92;
+      } else if (id === "waterway") c.paint = { "line-color": "#5cc8ff", "line-width": l.paint["line-width"] };
+      else if (sl === "boundaries") { c.paint = { "line-color": "#ffffff", "line-opacity": 0.7 }; if (l.paint["line-width"]) c.paint["line-width"] = l.paint["line-width"]; if (l.paint["line-dasharray"]) c.paint["line-dasharray"] = l.paint["line-dasharray"]; }
+      else return;
+    } else if (l.type === "symbol") {
+      if (!["places", "roads", "water"].includes(sl) || (l.layout && l.layout["icon-image"])) return;
+      c.paint = { "text-color": "#ffffff", "text-halo-color": "#05080F", "text-halo-width": 1.6 };
+    } else return;
+    out.push(c);
+  });
+  return out;
+}
+/* uydu: Esri Clarity ustte, standart Esri altta (Clarity karosu yoksa alttaki gorunur); zoom 17 ile sinirli */
+function mkStyle(terr) {
+  const cj = S.carto, vec = cj && cj.sources && cj.sources.protomaps && cj.glyphs;
+  const sources = { sat: SAT_SRC, clarity: CLARITY_SRC };
+  if (vec) sources.protomaps = cj.sources.protomaps; else sources.lbl = LBL_SRC;
+  const layers = [{ id: "bg", type: "background", paint: { "background-color": "#05080F" } }, { id: "sat", type: "raster", source: "sat", paint: IMG_PAINT }, { id: "clarity", type: "raster", source: "clarity", paint: IMG_PAINT }];
+  if (terr) { sources.dem = DEM_SRC; sources.hs = DEM_SRC; layers.push({ id: "hs", type: "hillshade", source: "hs", paint: { "hillshade-exaggeration": 0.55, "hillshade-shadow-color": "#000", "hillshade-highlight-color": "#fff" } }); }
+  if (vec) layers.push(...vecOverlay(cj)); else layers.push({ id: "lbl", type: "raster", source: "lbl", minzoom: 3 });
+  const st = { version: 8, projection: { type: "globe" }, sources, layers }; if (vec) st.glyphs = cj.glyphs; return st;
+}
 function initMap() {
-  map = new maplibregl.Map({ container: "mapEl", center: [20, 30], zoom: wide() ? 2.2 : 1.1, minZoom: 0.8, maxZoom: 18, maxPitch: 75, cooperativeGestures: true, locale: coopText(), attributionControl: { compact: true }, pitch: 0, hash: false, style: STYLES.sat });
+  map = new maplibregl.Map({ container: "mapEl", center: [20, 30], zoom: wide() ? 2.2 : 1.1, minZoom: 0.8, maxZoom: 17, maxPitch: 75, cooperativeGestures: true, locale: coopText(), attributionControl: { compact: true }, pitch: 0, hash: false, style: STYLES.sat });
   map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-left");
   map.on("style.load", () => { try { map.setProjection({ type: "globe" }); drawLocal(); map.setSky({ "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 5, 1, 7, 0], "sky-color": "#05080F", "horizon-color": "#00F0FF", "fog-color": "#0a1830", "sky-horizon-blend": 0.4, "horizon-fog-blend": 0.5, "fog-ground-blend": 0.2 }); } catch (e) {} });
   map.on("load", () => { renderMarkers(); spin(); lab(); localInit(); });
@@ -89,6 +120,7 @@ function syncTerrain() {
 function setLayer(l) {
   if (l === S.layer) return; S.layer = l; $$("#layers button").forEach(b => b.classList.toggle("on", b.dataset.l === l));
   try { map.setTerrain(null); } catch (e) {}
+  map.setMaxZoom(l === "dark" ? 18 : 17);
   requestAnimationFrame(() => { map.setStyle(STYLES[l]); map.once("idle", syncTerrain); });
   if (l === "terrain" && map.getZoom() > 4.5) map.easeTo({ pitch: 62, duration: 1200 });
   if (l !== "terrain" && map.getPitch() > 0 && !S.current) map.easeTo({ pitch: 0, duration: 800 });
@@ -320,7 +352,9 @@ function toggleFs() {
 }
 
 /* ---------- baslat ---------- */
-function boot() {
+async function boot() {
+  try { const ctl = new AbortController(), to = setTimeout(() => ctl.abort(), 5000); S.carto = await (await fetch(STYLES.dark, { signal: ctl.signal })).json(); clearTimeout(to); } catch (e) {}
+  STYLES.sat = mkStyle(false); STYLES.terrain = mkStyle(true);
   $("#lang").innerHTML = Object.entries(LANGS).map(([k, v]) => `<option value="${k}">${v}</option>`).join("");
   $("#lang").onchange = e => applyLang(e.target.value, true);
   S.lang = detectLang(); initMap();
@@ -347,6 +381,6 @@ function boot() {
   const qp = qs.get("place");
   if (qp && bySlug(qp)) map.once("load", () => { goMap(); setTimeout(() => openPlace(bySlug(qp)), 500); });
   syncUrl(true);
-  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js").catch(() => {}));
+  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) addEventListener("load", () => { const had = !!navigator.serviceWorker.controller; navigator.serviceWorker.addEventListener("controllerchange", () => { if (had && !window.__rl) { window.__rl = 1; location.reload(); } }); navigator.serviceWorker.register("./service-worker.js").then(r => r.update()).catch(() => {}); });
 }
 document.addEventListener("DOMContentLoaded", boot);

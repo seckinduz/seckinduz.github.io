@@ -148,10 +148,10 @@ function renderLocal() {
   if (L.busy && !L.data) h += `<p class="small">${t("loading")}</p>`;
   if (L.data) {
     const k = L.counts || {}; h += `<div class="lleg">` + [["walk", "#00F0FF", t("walk")], ["bike", "#FF9E00", t("bike")], ["green", "#2eff9a", t("green")]].map(([id, col, lab]) => `<label><input type="checkbox" data-k="${id}" ${L.show[id] ? "checked" : ""}><i style="background:${col}"></i>${lab} <small class="mono dim">${k[id] || 0}</small></label>`).join("") + `</div>`;
-    if (!(k.walk || k.bike || k.green)) h += `<p class="small">${t("noroutes")}</p>`;
+    if (!(k.walk || k.bike)) h += `<p class="small notrail">ⓘ ${t("notrail")} <a href="#" id="retB" title="↻" aria-label="Retry">↻</a></p>`;
     if (L.routes.length) h += `<label class="small">${t("pickroute")}</label><select id="rsel">${L.routes.map((r, i) => `<option value="${i}" ${i === L.sel ? "selected" : ""}>${r.kind === "bike" ? "🚲" : "🥾"} ${esc(r.name || (r.kind === "bike" ? t("bike") : t("walk")))} · ${r.km.toFixed(1)} km</option>`).join("")}</select><button class="btn cyan wide" id="pvB">${L.anim ? "■ " + t("stopprev") : "🎥 " + t("preview")}</button>`;
   }
-  if (L.err === "net") h += `<p class="small">Overpass ✗ — <a href="#" id="retB">↻</a></p>`;
+  if (L.err === "net") h += `<p class="small notrail">ⓘ ${t("trailerr")} <a href="#" id="retB" title="↻" aria-label="Retry">↻</a></p>`;
   if (nw) h += `<div class="lnear"><span class="small">${t("nearestw")}</span><b>${esc(nw.p.name)} <span class="mono ok">(${Math.round(nw.d).toLocaleString()} km)</span></b><button class="btn amber wide" id="nwB">✈ ${t("flywatch")}</button></div>`;
   h += `<h4>${t("notes_h")}</h4>` + (L.notes == null ? `<p class="small">${c ? t("loading") : ""}</p>` : L.notes.length ? L.notes.map((n, i) => `<div class="note"><button class="nimg" data-n="${i}" ${n.img ? `style="background-image:url(${esc(n.img)})"` : ""} aria-label="${esc(n.title)}"></button><div><a href="https://${n.lg}.wikipedia.org/wiki/${encodeURIComponent(n.title.replace(/ /g, "_"))}" target="_blank" rel="noopener"><b>${esc(n.title)}</b></a><p>${esc(n.ex.length > 150 ? n.ex.slice(0, 147) + "…" : n.ex)}</p></div></div>`).join("") : `<p class="small">${t("nonotes")}</p>`);
   el.innerHTML = h;
