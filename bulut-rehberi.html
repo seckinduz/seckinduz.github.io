@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Ücretsiz 12 GB RAM & Haftalık 30 Saat GPU Kurulum Rehberi | seckinduz</title>
-<meta name="description" content="Oracle Cloud Always Free (2 OCPU / 12 GB RAM Arm sunucu) ve Kaggle haftalık 30 saat GPU kotası için adım adım, kopyala-yapıştır komutlu Türkçe kurulum rehberi. Resmi ve ücretsiz kotalar; ücretsiz PDF.">
+<meta name="description" id="mdesc" content="Oracle Cloud Always Free (2 OCPU / 12 GB RAM Arm sunucu) ve Kaggle haftalık 30 saat GPU kotası için adım adım, kopyala-yapıştır komutlu Türkçe kurulum rehberi. Resmi ve ücretsiz kotalar; ücretsiz PDF.">
 <link rel="canonical" href="https://seckinduz.com/bulut-rehberi.html">
+<link rel="alternate" hreflang="tr" href="https://seckinduz.com/bulut-rehberi.html?lang=tr"><link rel="alternate" hreflang="en" href="https://seckinduz.com/bulut-rehberi.html?lang=en"><link rel="alternate" hreflang="es" href="https://seckinduz.com/bulut-rehberi.html?lang=es"><link rel="alternate" hreflang="de" href="https://seckinduz.com/bulut-rehberi.html?lang=de"><link rel="alternate" hreflang="x-default" href="https://seckinduz.com/bulut-rehberi.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ücretsiz 12 GB RAM & Haftalık 30 Saat GPU Kurulum Rehberi">
-<meta property="og:description" content="Oracle Cloud Always Free (2 OCPU / 12 GB RAM Arm sunucu) ve Kaggle haftalık 30 saat GPU kotası için adım adım, kopyala-yapıştır komutlu Türkçe kurulum rehberi. Resmi ve ücretsiz kotalar; ücretsiz PDF.">
+<meta property="og:title" id="ogt" content="Ücretsiz 12 GB RAM & Haftalık 30 Saat GPU Kurulum Rehberi">
+<meta property="og:description" id="ogd" content="Oracle Cloud Always Free (2 OCPU / 12 GB RAM Arm sunucu) ve Kaggle haftalık 30 saat GPU kotası için adım adım, kopyala-yapıştır komutlu Türkçe kurulum rehberi. Resmi ve ücretsiz kotalar; ücretsiz PDF.">
 <meta property="og:url" content="https://seckinduz.com/bulut-rehberi.html">
 <meta property="og:image" content="https://seckinduz.com/img/logo.png">
 <meta name="theme-color" content="#05080F">
@@ -44,25 +45,32 @@ summary{cursor:pointer;font-weight:600;color:#fff}
 .dl{display:flex;gap:16px;align-items:center;flex-wrap:wrap;border:1px solid var(--line);border-radius:var(--r);padding:16px 20px;margin:0 0 8px;background:linear-gradient(135deg,rgba(0,240,255,.08),rgba(255,158,0,.05))}
 .dl div{flex:1;min-width:220px}.dl b{color:#fff}
 @media(max-width:720px){.mainnav{display:none}.mainnav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#05080F;padding:10px 16px;border-bottom:1px solid var(--line)}.burger{display:flex}.guide table{font-size:.8rem}}
+
+.lsw{display:flex;gap:2px;border:1px solid var(--line);border-radius:10px;padding:2px;background:#07101d}
+.lsw button{background:none;border:0;color:var(--mut);font:600 .78rem var(--ff);padding:6px 9px;border-radius:8px;cursor:pointer}
+.lsw button[aria-pressed=true]{background:rgba(0,240,255,.16);color:#fff}
+.lsw button:hover{color:var(--cy)}
+.gl[hidden]{display:none}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Ücretsiz 12 GB RAM & Haftalık 30 Saat GPU Kurulum Rehberi","inLanguage":"tr","url":"https://seckinduz.com/bulut-rehberi.html","dateModified":"2026-11-22","author":{"@type":"Person","name":"seckinduz"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Ücretsiz 12 GB RAM & Haftalık 30 Saat GPU Kurulum Rehberi","inLanguage":["tr","en","es","de"],"url":"https://seckinduz.com/bulut-rehberi.html","dateModified":"2026-11-22","author":{"@type":"Person","name":"seckinduz"}}</script>
 </head>
 <body>
 <header class="site" id="top"><div class="site-in">
  <a class="logo" href="./" aria-label="seckinduz"><img src="./v2/img/logo-96.png" alt="" width="34" height="34"><span>seckin<b>duz</b></span></a>
- <nav class="mainnav" id="mainnav" aria-label="Main"><a href="./#map">Harita</a><a href="./#articles">Magazine</a><a href="./#stories">Stories</a><a href="./#quiz-sec">Quiz</a><a href="./#ebook">E-Book</a><a href="./bulut-rehberi.html" aria-current="page">E · Bulut Rehberi</a></nav>
- <div class="site-r"><button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+ <nav class="mainnav" id="mainnav" aria-label="Main"><a href="./#map" data-n="0">Harita</a><a href="./#articles" data-n="1">Magazine</a><a href="./#stories" data-n="2">Stories</a><a href="./#quiz-sec" data-n="3">Quiz</a><a href="./#ebook" data-n="4">E-Book</a><a href="./bulut-rehberi.html" data-n="5" aria-current="page">E · Bulut Rehberi</a></nav>
+ <div class="site-r"><div class="lsw" id="lsw" role="group" aria-label="Language"><button type="button" data-l="tr" aria-pressed="true">TR</button><button type="button" data-l="en" aria-pressed="false">EN</button><button type="button" data-l="es" aria-pressed="false">ES</button><button type="button" data-l="de" aria-pressed="false">DE</button></div><button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
 </div></header>
 <main>
 <section class="ghero">
  <span class="pill"><i></i><span class="mono">E · CLOUD &amp; GPU GUIDE</span></span>
- <h1>Ücretsiz 12 GB RAM & Haftalık 30 Saat GPU Kurulum Rehberi</h1>
- <p>Resmi, %100 ücretsiz kotalarla: Oracle Cloud Always Free ve Kaggle Notebooks. Kopyala-yapıştır komutlarla adım adım kurulum. Son doğrulama: 22 Kasım 2026.</p>
+ <h1 id="h1">Ücretsiz 12 GB RAM & Haftalık 30 Saat GPU Kurulum Rehberi</h1>
+ <p id="hp">Resmi, %100 ücretsiz kotalarla: Oracle Cloud Always Free ve Kaggle Notebooks. Kopyala-yapıştır komutlarla adım adım kurulum. Son doğrulama: 22 Kasım 2026.</p>
 </section>
 <article class="guide">
- <div class="dl"><div><b>İndirilebilir PDF sürümü</b><br><span class="small">Aynı rehber, çevrimdışı okumak için. Tek tıkla indir.</span></div>
- <a class="btn amber big" href="./downloads/Ucretsiz_Bulut_ve_GPU_Kurulum_Rehberi.pdf" data-pdf-download>⬇ PDF'i indir</a></div>
- <div class="trust">
+ <div class="dl"><div><b id="dlt">İndirilebilir PDF sürümü</b><br><span class="small" id="dls">Aynı rehber, çevrimdışı okumak için. Tek tıkla indir.</span></div>
+ <a class="btn amber big" id="dlb" href="./downloads/Ucretsiz_Bulut_ve_GPU_Kurulum_Rehberi.pdf" data-pdf-download data-gate-lang="tr">⬇ PDF'i indir</a></div>
+<div class="gl" data-lang="tr" lang="tr">
+<div class="trust">
 <h2>Önce dürüst olalım: bu rehber neyi, ne kadar ücretsiz veriyor?</h2>
 <p>Burada anlatılan iki sistem de şirketlerin kendi <b>resmi ücretsiz kotalarıdır</b>: <b>Oracle Cloud Always Free</b> ve <b>Kaggle Notebooks haftalık GPU kotası</b>. Gizli abonelik, deneme süresi sonunda otomatik faturalama ya da üçüncü taraf "bedava sunucu" hilesi yoktur. Ama ücretsiz kotaların <b>sınırları</b> vardır ve zamanla değişebilir. Bu yüzden rakamları aşağıda kaynağıyla birlikte yazıyoruz.</p>
 <div class="tblw"><table class="facts">
@@ -74,7 +82,7 @@ summary{cursor:pointer;font-weight:600;color:#fff}
 <p class="note"><b>Güvenlik sözü:</b> Bu rehberde bize ait hiçbir sunucu IP'si, şifre, SSH anahtarı ya da API anahtarı yoktur. Kodlardaki <code>&lt;SUNUCU_IP&gt;</code> gibi yer tutucuları kendi bilgilerinle değiştirirsin. Kendi anahtarlarını da asla bir sohbete, ekran görüntüsüne ya da herkese açık depoya yapıştırma.</p>
 </div>
 
-<h2 id="oracle">1 · Oracle Cloud Always Free: 12 GB RAM'li Arm sunucu</h2>
+<h2>1 · Oracle Cloud Always Free: 12 GB RAM'li Arm sunucu</h2>
 <h3>Adım 1: Hesabı aç</h3>
 <ol>
 <li><a href="https://www.oracle.com/cloud/free/" rel="noopener">oracle.com/cloud/free</a> adresinden kayıt ol. Kayıt sırasında Oracle e-posta, telefon ve ödeme yöntemi gibi doğrulama adımları isteyebilir; hangi adımların istendiği bölgeye ve döneme göre değişir, ekrandaki açıklamayı oku.</li>
@@ -122,7 +130,7 @@ sudo netfilter-persistent save</code></pre>
 <h3>Boşta kalma uyarısı</h3>
 <p>Oracle belgesine göre 7 günlük sürede CPU kullanımının 95. yüzdelik değeri %20'nin altındaysa, ağ kullanımı %20'nin altındaysa ve (A1 için) bellek kullanımı %20'nin altındaysa, sunucu boşta sayılıp <b>geri alınabilir</b>. Sunucuyu gerçekten kullanacağın bir iş için aç; yapay yük üretme numaralarına güvenme.</p>
 
-<h2 id="kaggle">2 · Kaggle: haftalık 30 saat GPU</h2>
+<h2>2 · Kaggle: haftalık 30 saat GPU</h2>
 <h3>Adım 1: Hesabı aç ve telefonunu doğrula</h3>
 <ol>
 <li><a href="https://www.kaggle.com/" rel="noopener">kaggle.com</a> adresinde ücretsiz hesap aç.</li>
@@ -162,27 +170,393 @@ print("20 matris çarpımı:", round(time.time() - t, 2), "sn")</code></pre>
 token = UserSecretsClient().get_secret("HF_TOKEN")</code></pre>
 <p>Not defterini herkese açık paylaşmadan önce çıktılarında anahtar kalıp kalmadığını kontrol et.</p>
 
-<h2 id="sss">3 · Sık sorulanlar</h2>
+<h2>3 · Sık sorulanlar</h2>
 <details><summary>Gerçekten tamamen ücretsiz mi?</summary><p>Oracle Always Free kaynaklarını ve Kaggle'ın ücretsiz kotasını belgelerdeki sınırlar içinde kullandığın sürece ücret yoktur. Limit üstü kullanım ya da kendi isteğinle ücretli hesaba geçiş ücret doğurabilir.</p></details>
 <details><summary>Neden 24 GB değil de 12 GB yazıyor?</summary><p>Oracle'ın güncel resmi belgesi Always Free Ampere A1 için toplam 2 OCPU ve 12 GB bellek yazıyor. Eski 4 OCPU / 24 GB değerini hâlâ görebileceğin eski yazılar güncel değil.</p></details>
 <details><summary>Kota değişirse?</summary><p>Aşağıdaki resmi kaynakları kontrol et. Bu rehber son olarak 22 Kasım 2026'da doğrulandı.</p></details>
 
-<h2 id="kaynaklar">Resmi kaynaklar</h2>
+<h2>Resmi kaynaklar</h2>
 <ul>
 <li><a href="https://docs.oracle.com/en-us/iaas/Content/FreeTier/resourceref.htm" rel="noopener">Oracle: Always Free Resources</a></li>
 <li><a href="https://www.kaggle.com/docs/notebooks" rel="noopener">Kaggle: Notebooks dokümantasyonu</a></li>
 </ul>
 
- <p class="small" style="margin-top:34px">Bu sayfa bilgilendirme amaçlıdır. Kotalar ve koşullar ilgili şirketler tarafından değiştirilebilir; her zaman resmi belgeleri esas al. Sayfada kişisel sunucu bilgisi, şifre veya API anahtarı yoktur.</p>
+</div>
+<div class="gl" data-lang="en" lang="en" hidden>
+<div class="trust">
+<h2>Let's be honest first: what does this guide give you for free, and how much?</h2>
+<p>Both systems described here are the companies' own <b>official free quotas</b>: <b>Oracle Cloud Always Free</b> and the <b>Kaggle Notebooks weekly GPU quota</b>. There are no hidden subscriptions, no automatic billing after a trial, and no third-party "free server" tricks. But free quotas have <b>limits</b> and they can change over time. That is why we list the numbers below together with their sources.</p>
+<div class="tblw"><table class="facts">
+<thead><tr><th>Platform</th><th>What you get (per the official docs)</th><th>Watch out</th></tr></thead>
+<tbody>
+<tr><td><b>Oracle Cloud Always Free</b></td><td>Arm (Ampere A1) virtual machine: <b>2 OCPUs and 12 GB RAM</b> in total (1,500 OCPU-hours / 9,000 GB-hours per month). Plus 2 small AMD VMs (1/8 OCPU, 1 GB RAM each) and 200 GB of block storage in total.</td><td>This quota used to be known as 4 OCPUs / 24 GB; Oracle's current documentation says 2 OCPUs / 12 GB. Resources can only be created in your <b>home region</b>. Idle instances can be reclaimed.</td></tr>
+<tr><td><b>Kaggle Notebooks</b></td><td>About <b>30 GPU hours per week</b> (T4 ×2 or P100 options) and free CPU sessions.</td><td>Phone verification is required for GPU. Quota and session length can be changed by Kaggle; read the current value from the quota indicator in your account.</td></tr>
+</tbody></table></div>
+<p class="note"><b>Security promise:</b> This guide contains none of our own server IPs, passwords, SSH keys or API keys. You replace placeholders such as <code>&lt;SERVER_IP&gt;</code> with your own details. Never paste your own keys into a chat, a screenshot or a public repository.</p>
+</div>
+
+<h2>1 · Oracle Cloud Always Free: an Arm server with 12 GB RAM</h2>
+<h3>Step 1: Create the account</h3>
+<ol>
+<li>Sign up at <a href="https://www.oracle.com/cloud/free/" rel="noopener">oracle.com/cloud/free</a>. During sign-up Oracle may ask for verification steps such as email, phone and payment-method verification; which steps are required varies by region and over time, so read what the screen says.</li>
+<li>Choose your <b>home region</b> carefully: Always Free resources can only be created in this region, and it cannot be changed later.</li>
+<li>As long as you stay within the Always Free limits you are not charged. Do not upgrade to a paid account (Pay As You Go) by accident.</li>
+</ol>
+
+<h3>Step 2: Generate the SSH key on your own computer</h3>
+<p>In a terminal (the same command on Windows 10/11 PowerShell, macOS and Linux):</p>
+<pre><code>ssh-keygen -t ed25519 -f ~/.ssh/oracle_free -C "oracle-free"</code></pre>
+<p>You will paste the contents of <code>oracle_free.pub</code> into the Oracle console. The file without an extension (<code>oracle_free</code>) is your <b>private key</b>; never share it with anyone.</p>
+
+<h3>Step 3: Create the virtual machine</h3>
+<ol>
+<li>In the console go to <b>Compute → Instances → Create instance</b>.</li>
+<li><b>Image:</b> Canonical Ubuntu 24.04 (aarch64 / Arm).</li>
+<li><b>Shape:</b> Ampere → <code>VM.Standard.A1.Flex</code>, <b>2 OCPUs and 12 GB memory</b> (it should carry the Always Free label).</li>
+<li><b>Boot volume:</b> 50 GB is enough; it counts against the 200 GB total quota.</li>
+<li><b>Add SSH keys:</b> paste the contents of <code>oracle_free.pub</code>.</li>
+<li>Click Create. If you get an "Out of host capacity" error, there is currently no free Arm capacity in the region; try again at another time or pick a different availability domain.</li>
+</ol>
+
+<h3>Step 4: Connect and update the system</h3>
+<pre><code>ssh -i ~/.ssh/oracle_free ubuntu@&lt;SERVER_IP&gt;
+sudo apt update &amp;&amp; sudo apt -y upgrade
+free -h &amp;&amp; nproc</code></pre>
+<p>The output should show about 12 GB of memory and 2 cores.</p>
+
+<h3>Step 5: Harden SSH (after you have confirmed that key login works)</h3>
+<pre><code>sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
+sudo systemctl restart ssh</code></pre>
+
+<h3>Step 6: Install Docker and test it</h3>
+<pre><code>curl -fsSL https://get.docker.com | sudo sh
+sudo usermod -aG docker $USER
+newgrp docker
+docker run --rm hello-world</code></pre>
+
+<h3>Step 7: Put a web service online (optional)</h3>
+<pre><code>docker run -d --name web --restart unless-stopped -p 80:80 nginx:alpine
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
+sudo netfilter-persistent save</code></pre>
+<p>For access from outside you also need to allow inbound traffic on port 80 in the console under <b>VCN → Security List</b>.</p>
+
+<h3>Idle warning</h3>
+<p>According to Oracle's documentation, if over a 7-day period the 95th-percentile CPU utilization is below 20%, network utilization is below 20% and (for A1) memory utilization is below 20%, the instance counts as idle and <b>may be reclaimed</b>. Create the server for a job you will really run; do not rely on tricks that generate artificial load.</p>
+
+<h2>2 · Kaggle: 30 GPU hours per week</h2>
+<h3>Step 1: Create the account and verify your phone</h3>
+<ol>
+<li>Create a free account at <a href="https://www.kaggle.com/" rel="noopener">kaggle.com</a>.</li>
+<li>Verify your phone under <b>Settings → Phone Verification</b>. GPU and internet access stay locked until this is done.</li>
+</ol>
+
+<h3>Step 2: Start a notebook with a GPU</h3>
+<ol>
+<li><b>Create → New Notebook</b>.</li>
+<li>In the right panel choose <b>Session options → Accelerator</b>: <code>GPU T4 ×2</code> or <code>GPU P100</code>.</li>
+<li>Track your remaining quota with the quota indicator on your profile or in the notebook. When you are not using the session, close it with <b>Stop session</b>; an open session also eats into the quota.</li>
+</ol>
+
+<h3>Step 3: Verify the GPU</h3>
+<pre><code>!nvidia-smi</code></pre>
+<pre><code>import torch
+print("CUDA:", torch.cuda.is_available(), "| GPU count:", torch.cuda.device_count())
+for i in range(torch.cuda.device_count()):
+    print(i, torch.cuda.get_device_name(i))</code></pre>
+
+<h3>Step 4: Quick performance test</h3>
+<pre><code>import time, torch
+x = torch.randn(8192, 8192, device="cuda", dtype=torch.float16)
+torch.cuda.synchronize(); t = time.time()
+for _ in range(20):
+    y = x @ x
+torch.cuda.synchronize()
+print("20 matrix multiplications:", round(time.time() - t, 2), "s")</code></pre>
+
+<h3>Step 5: Install libraries and save your output</h3>
+<pre><code>!pip -q install transformers accelerate</code></pre>
+<p>Write the files you want to keep to the <code>/kaggle/working/</code> folder; other files are deleted when the session ends.</p>
+
+<h3>Step 6: Store secret keys the right way</h3>
+<p>If a service key is needed (for example a model download token), do not write it into your code. Add it under <b>Add-ons → Secrets</b> in the notebook and read it like this:</p>
+<pre><code>from kaggle_secrets import UserSecretsClient
+token = UserSecretsClient().get_secret("HF_TOKEN")</code></pre>
+<p>Before sharing a notebook publicly, check that no key is left in its outputs.</p>
+
+<h2>3 · Frequently asked questions</h2>
+<details><summary>Is it really completely free?</summary><p>As long as you use the Oracle Always Free resources and Kaggle's free quota within the limits in their documentation, there is no charge. Usage above the limits, or upgrading to a paid account of your own choice, can cost money.</p></details>
+<details><summary>Why does it say 12 GB and not 24 GB?</summary><p>Oracle's current official documentation lists a total of 2 OCPUs and 12 GB of memory for Always Free Ampere A1. Older articles that still show the former 4 OCPU / 24 GB value are out of date.</p></details>
+<details><summary>What if the quotas change?</summary><p>Check the official sources below. This guide was last verified on 22 November 2026.</p></details>
+
+<h2>Official sources</h2>
+<ul>
+<li><a href="https://docs.oracle.com/en-us/iaas/Content/FreeTier/resourceref.htm" rel="noopener">Oracle: Always Free Resources</a></li>
+<li><a href="https://www.kaggle.com/docs/notebooks" rel="noopener">Kaggle: Notebooks documentation</a></li>
+</ul>
+
+</div>
+<div class="gl" data-lang="es" lang="es" hidden>
+<div class="trust">
+<h2>Primero, seamos honestos: ¿qué te da esta guía gratis y cuánto?</h2>
+<p>Los dos sistemas que se explican aquí son las <b>cuotas gratuitas oficiales</b> de las propias empresas: <b>Oracle Cloud Always Free</b> y la <b>cuota semanal de GPU de Kaggle Notebooks</b>. No hay suscripciones ocultas, ni cobros automáticos al terminar una prueba, ni trucos de "servidores gratis" de terceros. Pero las cuotas gratuitas tienen <b>límites</b> y pueden cambiar con el tiempo. Por eso escribimos las cifras abajo junto con su fuente.</p>
+<div class="tblw"><table class="facts">
+<thead><tr><th>Plataforma</th><th>Qué obtienes (según la documentación oficial)</th><th>Ten en cuenta</th></tr></thead>
+<tbody>
+<tr><td><b>Oracle Cloud Always Free</b></td><td>Máquina virtual Arm (Ampere A1): en total <b>2 OCPU y 12 GB de RAM</b> (1.500 horas OCPU / 9.000 horas GB al mes). Además 2 VM AMD pequeñas (1/8 de OCPU y 1 GB de RAM cada una) y 200 GB de almacenamiento en bloque en total.</td><td>Esta cuota se conocía antes como 4 OCPU / 24 GB; la documentación actual de Oracle dice 2 OCPU / 12 GB. Los recursos solo se crean en tu <b>región principal (home region)</b>. Las instancias inactivas pueden ser recuperadas.</td></tr>
+<tr><td><b>Kaggle Notebooks</b></td><td>Unas <b>30 horas de GPU por semana</b> (opciones T4 ×2 o P100) y sesiones de CPU gratuitas.</td><td>Para usar GPU hace falta verificar el teléfono. Kaggle puede cambiar la cuota y la duración de la sesión; lee el valor actual en el indicador de cuota de tu cuenta.</td></tr>
+</tbody></table></div>
+<p class="note"><b>Promesa de seguridad:</b> Esta guía no contiene ninguna IP de servidor, contraseña, clave SSH ni clave de API nuestra. Tú sustituyes marcadores como <code>&lt;IP_DEL_SERVIDOR&gt;</code> por tus propios datos. Nunca pegues tus claves en un chat, en una captura de pantalla ni en un repositorio público.</p>
+</div>
+
+<h2>1 · Oracle Cloud Always Free: un servidor Arm con 12 GB de RAM</h2>
+<h3>Paso 1: Crea la cuenta</h3>
+<ol>
+<li>Regístrate en <a href="https://www.oracle.com/cloud/free/" rel="noopener">oracle.com/cloud/free</a>. Durante el registro Oracle puede pedir pasos de verificación como correo, teléfono y verificación del método de pago; cuáles se piden depende de la región y de la época, así que lee lo que indica la pantalla.</li>
+<li>Elige con cuidado tu <b>región principal (home region)</b>: los recursos Always Free solo se crean en esa región y después no se puede cambiar.</li>
+<li>Mientras te mantengas dentro de los límites de Always Free no se te cobra. No pases por accidente a una cuenta de pago (Pay As You Go).</li>
+</ol>
+
+<h3>Paso 2: Genera la clave SSH en tu propio ordenador</h3>
+<p>En un terminal (el mismo comando en PowerShell de Windows 10/11, macOS y Linux):</p>
+<pre><code>ssh-keygen -t ed25519 -f ~/.ssh/oracle_free -C "oracle-free"</code></pre>
+<p>Pegarás el contenido de <code>oracle_free.pub</code> en la consola de Oracle. El archivo sin extensión (<code>oracle_free</code>) es tu <b>clave privada</b>; no la compartas con nadie.</p>
+
+<h3>Paso 3: Crea la máquina virtual</h3>
+<ol>
+<li>En la consola ve a <b>Compute → Instances → Create instance</b>.</li>
+<li><b>Image:</b> Canonical Ubuntu 24.04 (aarch64 / Arm).</li>
+<li><b>Shape:</b> Ampere → <code>VM.Standard.A1.Flex</code>, <b>2 OCPU y 12 GB de memoria</b> (debe llevar la etiqueta Always Free).</li>
+<li><b>Boot volume:</b> 50 GB es suficiente; se descuenta de la cuota total de 200 GB.</li>
+<li><b>Add SSH keys:</b> pega el contenido de <code>oracle_free.pub</code>.</li>
+<li>Pulsa Create. Si aparece el error "Out of host capacity", ahora mismo no hay capacidad Arm libre en la región; prueba en otro momento o elige otro dominio de disponibilidad.</li>
+</ol>
+
+<h3>Paso 4: Conéctate y actualiza el sistema</h3>
+<pre><code>ssh -i ~/.ssh/oracle_free ubuntu@&lt;IP_DEL_SERVIDOR&gt;
+sudo apt update &amp;&amp; sudo apt -y upgrade
+free -h &amp;&amp; nproc</code></pre>
+<p>En la salida deberías ver unos 12 GB de memoria y 2 núcleos.</p>
+
+<h3>Paso 5: Refuerza SSH (después de comprobar que el acceso con clave funciona)</h3>
+<pre><code>sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
+sudo systemctl restart ssh</code></pre>
+
+<h3>Paso 6: Instala Docker y pruébalo</h3>
+<pre><code>curl -fsSL https://get.docker.com | sudo sh
+sudo usermod -aG docker $USER
+newgrp docker
+docker run --rm hello-world</code></pre>
+
+<h3>Paso 7: Publica un servicio web (opcional)</h3>
+<pre><code>docker run -d --name web --restart unless-stopped -p 80:80 nginx:alpine
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
+sudo netfilter-persistent save</code></pre>
+<p>Para acceder desde fuera, también debes permitir el tráfico entrante por el puerto 80 en la consola, en <b>VCN → Security List</b>.</p>
+
+<h3>Aviso de inactividad</h3>
+<p>Según la documentación de Oracle, si durante 7 días el percentil 95 del uso de CPU está por debajo del 20 %, el uso de red está por debajo del 20 % y (para A1) el uso de memoria está por debajo del 20 %, la instancia se considera inactiva y <b>puede ser recuperada</b>. Crea el servidor para un trabajo que de verdad vayas a ejecutar; no confíes en trucos que generen carga artificial.</p>
+
+<h2>2 · Kaggle: 30 horas de GPU por semana</h2>
+<h3>Paso 1: Crea la cuenta y verifica tu teléfono</h3>
+<ol>
+<li>Crea una cuenta gratuita en <a href="https://www.kaggle.com/" rel="noopener">kaggle.com</a>.</li>
+<li>Verifica tu teléfono en <b>Settings → Phone Verification</b>. Sin esto no se activa el acceso a GPU ni a internet.</li>
+</ol>
+
+<h3>Paso 2: Inicia un cuaderno con GPU</h3>
+<ol>
+<li><b>Create → New Notebook</b>.</li>
+<li>En el panel derecho elige <b>Session options → Accelerator</b>: <code>GPU T4 ×2</code> o <code>GPU P100</code>.</li>
+<li>Sigue tu cuota restante en el indicador de cuota de tu perfil o del cuaderno. Cuando no uses la sesión, ciérrala con <b>Stop session</b>; una sesión abierta también consume cuota.</li>
+</ol>
+
+<h3>Paso 3: Comprueba la GPU</h3>
+<pre><code>!nvidia-smi</code></pre>
+<pre><code>import torch
+print("CUDA:", torch.cuda.is_available(), "| Número de GPU:", torch.cuda.device_count())
+for i in range(torch.cuda.device_count()):
+    print(i, torch.cuda.get_device_name(i))</code></pre>
+
+<h3>Paso 4: Prueba rápida de rendimiento</h3>
+<pre><code>import time, torch
+x = torch.randn(8192, 8192, device="cuda", dtype=torch.float16)
+torch.cuda.synchronize(); t = time.time()
+for _ in range(20):
+    y = x @ x
+torch.cuda.synchronize()
+print("20 multiplicaciones de matrices:", round(time.time() - t, 2), "s")</code></pre>
+
+<h3>Paso 5: Instala bibliotecas y guarda la salida</h3>
+<pre><code>!pip -q install transformers accelerate</code></pre>
+<p>Escribe los archivos que quieras conservar en la carpeta <code>/kaggle/working/</code>; los demás archivos se borran al terminar la sesión.</p>
+
+<h3>Paso 6: Guarda las claves secretas de la forma correcta</h3>
+<p>Si necesitas una clave de servicio (por ejemplo, un token para descargar modelos), no la escribas en el código. Añádela en <b>Add-ons → Secrets</b> del cuaderno y léela así:</p>
+<pre><code>from kaggle_secrets import UserSecretsClient
+token = UserSecretsClient().get_secret("HF_TOKEN")</code></pre>
+<p>Antes de compartir un cuaderno públicamente, comprueba que no quede ninguna clave en sus salidas.</p>
+
+<h2>3 · Preguntas frecuentes</h2>
+<details><summary>¿De verdad es completamente gratis?</summary><p>Mientras uses los recursos Always Free de Oracle y la cuota gratuita de Kaggle dentro de los límites de su documentación, no hay ningún cobro. Superar los límites o pasarte por decisión propia a una cuenta de pago puede generar costes.</p></details>
+<details><summary>¿Por qué dice 12 GB y no 24 GB?</summary><p>La documentación oficial actual de Oracle indica para Always Free Ampere A1 un total de 2 OCPU y 12 GB de memoria. Los artículos antiguos que aún muestran el valor anterior de 4 OCPU / 24 GB están desactualizados.</p></details>
+<details><summary>¿Y si cambian las cuotas?</summary><p>Consulta las fuentes oficiales de abajo. Esta guía se verificó por última vez el 22 de noviembre de 2026.</p></details>
+
+<h2>Fuentes oficiales</h2>
+<ul>
+<li><a href="https://docs.oracle.com/en-us/iaas/Content/FreeTier/resourceref.htm" rel="noopener">Oracle: Always Free Resources</a></li>
+<li><a href="https://www.kaggle.com/docs/notebooks" rel="noopener">Kaggle: documentación de Notebooks</a></li>
+</ul>
+
+</div>
+<div class="gl" data-lang="de" lang="de" hidden>
+<div class="trust">
+<h2>Erst einmal ehrlich: Was bekommst du mit dieser Anleitung kostenlos, und wie viel?</h2>
+<p>Beide hier beschriebenen Systeme sind die <b>offiziellen Gratis-Kontingente</b> der Unternehmen selbst: <b>Oracle Cloud Always Free</b> und das <b>wöchentliche GPU-Kontingent von Kaggle Notebooks</b>. Es gibt keine versteckten Abos, keine automatische Abrechnung nach einer Testphase und keine "Gratis-Server"-Tricks von Drittanbietern. Gratis-Kontingente haben aber <b>Grenzen</b> und können sich mit der Zeit ändern. Deshalb nennen wir die Zahlen unten zusammen mit ihrer Quelle.</p>
+<div class="tblw"><table class="facts">
+<thead><tr><th>Plattform</th><th>Was du bekommst (laut offizieller Dokumentation)</th><th>Beachte</th></tr></thead>
+<tbody>
+<tr><td><b>Oracle Cloud Always Free</b></td><td>Arm-VM (Ampere A1): insgesamt <b>2 OCPUs und 12 GB RAM</b> (1.500 OCPU-Stunden / 9.000 GB-Stunden pro Monat). Dazu 2 kleine AMD-VMs (je 1/8 OCPU, 1 GB RAM) und insgesamt 200 GB Block-Speicher.</td><td>Dieses Kontingent war früher als 4 OCPUs / 24 GB bekannt; Oracles aktuelle Dokumentation nennt 2 OCPUs / 12 GB. Ressourcen lassen sich nur in deiner <b>Home Region</b> anlegen. Inaktive Instanzen können zurückgefordert werden.</td></tr>
+<tr><td><b>Kaggle Notebooks</b></td><td>Etwa <b>30 GPU-Stunden pro Woche</b> (Optionen T4 ×2 oder P100) und kostenlose CPU-Sitzungen.</td><td>Für die GPU ist eine Telefonverifizierung nötig. Kontingent und Sitzungsdauer kann Kaggle ändern; lies den aktuellen Wert in der Kontingentanzeige deines Kontos ab.</td></tr>
+</tbody></table></div>
+<p class="note"><b>Sicherheitsversprechen:</b> Diese Anleitung enthält keine eigenen Server-IPs, Passwörter, SSH-Schlüssel oder API-Schlüssel von uns. Platzhalter wie <code>&lt;SERVER_IP&gt;</code> ersetzt du durch deine eigenen Daten. Füge deine eigenen Schlüssel niemals in einen Chat, einen Screenshot oder ein öffentliches Repository ein.</p>
+</div>
+
+<h2>1 · Oracle Cloud Always Free: ein Arm-Server mit 12 GB RAM</h2>
+<h3>Schritt 1: Konto erstellen</h3>
+<ol>
+<li>Registriere dich auf <a href="https://www.oracle.com/cloud/free/" rel="noopener">oracle.com/cloud/free</a>. Bei der Anmeldung kann Oracle Verifizierungsschritte wie E-Mail, Telefon und Zahlungsmittel-Verifizierung verlangen; welche das sind, hängt von Region und Zeitpunkt ab, lies also, was auf dem Bildschirm steht.</li>
+<li>Wähle deine <b>Home Region</b> sorgfältig: Always-Free-Ressourcen lassen sich nur in dieser Region anlegen und sie kann später nicht geändert werden.</li>
+<li>Solange du innerhalb der Always-Free-Grenzen bleibst, fallen keine Kosten an. Wechsle nicht versehentlich auf ein kostenpflichtiges Konto (Pay As You Go).</li>
+</ol>
+
+<h3>Schritt 2: SSH-Schlüssel auf deinem eigenen Computer erzeugen</h3>
+<p>Im Terminal (derselbe Befehl unter Windows 10/11 PowerShell, macOS und Linux):</p>
+<pre><code>ssh-keygen -t ed25519 -f ~/.ssh/oracle_free -C "oracle-free"</code></pre>
+<p>Den Inhalt von <code>oracle_free.pub</code> fügst du in die Oracle-Konsole ein. Die Datei ohne Endung (<code>oracle_free</code>) ist dein <b>privater Schlüssel</b>; gib sie niemals weiter.</p>
+
+<h3>Schritt 3: Virtuelle Maschine erstellen</h3>
+<ol>
+<li>Gehe in der Konsole zu <b>Compute → Instances → Create instance</b>.</li>
+<li><b>Image:</b> Canonical Ubuntu 24.04 (aarch64 / Arm).</li>
+<li><b>Shape:</b> Ampere → <code>VM.Standard.A1.Flex</code>, <b>2 OCPUs und 12 GB Arbeitsspeicher</b> (muss das Always-Free-Label tragen).</li>
+<li><b>Boot volume:</b> 50 GB reichen; sie zählen auf das Gesamtkontingent von 200 GB.</li>
+<li><b>Add SSH keys:</b> füge den Inhalt von <code>oracle_free.pub</code> ein.</li>
+<li>Klicke auf Create. Erscheint der Fehler "Out of host capacity", gibt es in der Region gerade keine freie Arm-Kapazität; versuche es zu einer anderen Zeit erneut oder wähle eine andere Availability Domain.</li>
+</ol>
+
+<h3>Schritt 4: Verbinden und System aktualisieren</h3>
+<pre><code>ssh -i ~/.ssh/oracle_free ubuntu@&lt;SERVER_IP&gt;
+sudo apt update &amp;&amp; sudo apt -y upgrade
+free -h &amp;&amp; nproc</code></pre>
+<p>In der Ausgabe solltest du etwa 12 GB Speicher und 2 Kerne sehen.</p>
+
+<h3>Schritt 5: SSH absichern (nachdem du geprüft hast, dass der Schlüssel-Login funktioniert)</h3>
+<pre><code>sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
+sudo systemctl restart ssh</code></pre>
+
+<h3>Schritt 6: Docker installieren und testen</h3>
+<pre><code>curl -fsSL https://get.docker.com | sudo sh
+sudo usermod -aG docker $USER
+newgrp docker
+docker run --rm hello-world</code></pre>
+
+<h3>Schritt 7: Einen Webdienst online stellen (optional)</h3>
+<pre><code>docker run -d --name web --restart unless-stopped -p 80:80 nginx:alpine
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
+sudo netfilter-persistent save</code></pre>
+<p>Für den Zugriff von außen musst du in der Konsole unter <b>VCN → Security List</b> außerdem eingehenden Verkehr auf Port 80 erlauben.</p>
+
+<h3>Warnung vor Leerlauf</h3>
+<p>Laut Oracle-Dokumentation gilt eine Instanz als inaktiv und <b>kann zurückgefordert werden</b>, wenn über 7 Tage die CPU-Auslastung im 95. Perzentil unter 20 %, die Netzwerkauslastung unter 20 % und (bei A1) die Speicherauslastung unter 20 % liegt. Richte den Server für eine Aufgabe ein, die du wirklich ausführst; verlasse dich nicht auf Tricks, die künstliche Last erzeugen.</p>
+
+<h2>2 · Kaggle: 30 GPU-Stunden pro Woche</h2>
+<h3>Schritt 1: Konto erstellen und Telefon verifizieren</h3>
+<ol>
+<li>Erstelle ein kostenloses Konto auf <a href="https://www.kaggle.com/" rel="noopener">kaggle.com</a>.</li>
+<li>Verifiziere dein Telefon unter <b>Settings → Phone Verification</b>. Ohne das bleiben GPU- und Internetzugang gesperrt.</li>
+</ol>
+
+<h3>Schritt 2: Notebook mit GPU starten</h3>
+<ol>
+<li><b>Create → New Notebook</b>.</li>
+<li>Wähle im rechten Panel <b>Session options → Accelerator</b>: <code>GPU T4 ×2</code> oder <code>GPU P100</code>.</li>
+<li>Verfolge dein verbleibendes Kontingent in der Kontingentanzeige in deinem Profil oder im Notebook. Wenn du die Sitzung nicht nutzt, beende sie mit <b>Stop session</b>; auch eine geöffnete Sitzung verbraucht Kontingent.</li>
+</ol>
+
+<h3>Schritt 3: GPU prüfen</h3>
+<pre><code>!nvidia-smi</code></pre>
+<pre><code>import torch
+print("CUDA:", torch.cuda.is_available(), "| GPU-Anzahl:", torch.cuda.device_count())
+for i in range(torch.cuda.device_count()):
+    print(i, torch.cuda.get_device_name(i))</code></pre>
+
+<h3>Schritt 4: Schneller Leistungstest</h3>
+<pre><code>import time, torch
+x = torch.randn(8192, 8192, device="cuda", dtype=torch.float16)
+torch.cuda.synchronize(); t = time.time()
+for _ in range(20):
+    y = x @ x
+torch.cuda.synchronize()
+print("20 Matrixmultiplikationen:", round(time.time() - t, 2), "s")</code></pre>
+
+<h3>Schritt 5: Bibliotheken installieren und Ausgabe speichern</h3>
+<pre><code>!pip -q install transformers accelerate</code></pre>
+<p>Schreibe Dateien, die du behalten willst, in den Ordner <code>/kaggle/working/</code>; andere Dateien werden gelöscht, wenn die Sitzung endet.</p>
+
+<h3>Schritt 6: Geheime Schlüssel richtig aufbewahren</h3>
+<p>Brauchst du einen Dienstschlüssel (z. B. ein Token zum Herunterladen von Modellen), schreibe ihn nicht in den Code. Füge ihn im Notebook unter <b>Add-ons → Secrets</b> hinzu und lies ihn so aus:</p>
+<pre><code>from kaggle_secrets import UserSecretsClient
+token = UserSecretsClient().get_secret("HF_TOKEN")</code></pre>
+<p>Prüfe vor dem öffentlichen Teilen eines Notebooks, dass in den Ausgaben kein Schlüssel übrig ist.</p>
+
+<h2>3 · Häufige Fragen</h2>
+<details><summary>Ist es wirklich komplett kostenlos?</summary><p>Solange du die Always-Free-Ressourcen von Oracle und das Gratis-Kontingent von Kaggle innerhalb der in der Dokumentation genannten Grenzen nutzt, fallen keine Kosten an. Eine Nutzung über den Grenzen oder ein selbst gewählter Wechsel auf ein kostenpflichtiges Konto kann Geld kosten.</p></details>
+<details><summary>Warum steht hier 12 GB und nicht 24 GB?</summary><p>Oracles aktuelle offizielle Dokumentation nennt für Always Free Ampere A1 insgesamt 2 OCPUs und 12 GB Arbeitsspeicher. Ältere Artikel, die noch den früheren Wert von 4 OCPUs / 24 GB zeigen, sind veraltet.</p></details>
+<details><summary>Was, wenn sich die Kontingente ändern?</summary><p>Prüfe die offiziellen Quellen unten. Diese Anleitung wurde zuletzt am 22. November 2026 überprüft.</p></details>
+
+<h2>Offizielle Quellen</h2>
+<ul>
+<li><a href="https://docs.oracle.com/en-us/iaas/Content/FreeTier/resourceref.htm" rel="noopener">Oracle: Always Free Resources</a></li>
+<li><a href="https://www.kaggle.com/docs/notebooks" rel="noopener">Kaggle: Notebooks-Dokumentation</a></li>
+</ul>
+
+</div>
+ <p class="small" style="margin-top:34px" id="disc">Bu sayfa bilgilendirme amaçlıdır. Kotalar ve koşullar ilgili şirketler tarafından değiştirilebilir; her zaman resmi belgeleri esas al. Sayfada kişisel sunucu bilgisi, şifre veya API anahtarı yoktur.</p>
 </article>
 </main>
 <footer class="site-foot"><div class="wrap"><p><a href="https://www.youtube.com/@seckinduz" rel="noopener">YouTube</a> · <a href="https://beacons.ai/seckinduz" rel="noopener">beacons.ai/seckinduz</a> · <a href="./about.html">About</a> · <a href="./privacy.html">Privacy</a> · <a href="./contact.html">Contact</a></p><p class="small">© seckinduz</p></div></footer>
-<script src="./v2/js/sdconfig.js?v=28"></script><script src="./v2/js/pdfgate.js?v=28"></script>
+<script src="./v2/js/sdconfig.js?v=29"></script><script src="./v2/js/pdfgate.js?v=29"></script>
 <script>
-document.querySelectorAll('pre').forEach(function(p){var b=document.createElement('button');b.type='button';b.className='cp';b.textContent='Kopyala';
-b.onclick=function(){var t=p.querySelector('code').innerText;var done=function(){b.textContent='Kopyalandı ✓';setTimeout(function(){b.textContent='Kopyala'},1600)};
+(function(){
+var D={"tr": {"title": "Ücretsiz 12 GB RAM & Haftalık 30 Saat GPU Kurulum Rehberi", "desc": "Oracle Cloud Always Free (2 OCPU / 12 GB RAM Arm sunucu) ve Kaggle haftalık 30 saat GPU kotası için adım adım, kopyala-yapıştır komutlu Türkçe kurulum rehberi. Resmi ve ücretsiz kotalar; ücretsiz PDF.", "hero": "Resmi, %100 ücretsiz kotalarla: Oracle Cloud Always Free ve Kaggle Notebooks. Kopyala-yapıştır komutlarla adım adım kurulum. Son doğrulama: 22 Kasım 2026.", "nav": ["Harita", "Magazine", "Stories", "Quiz", "E-Book", "E · Bulut Rehberi"], "copy": "Kopyala", "copied": "Kopyalandı ✓", "dl_t": "İndirilebilir PDF sürümü", "dl_s": "Aynı rehber, çevrimdışı okumak için. Tek tıkla indir.", "dl_b": "⬇ PDF'i indir", "disc": "Bu sayfa bilgilendirme amaçlıdır. Kotalar ve koşullar ilgili şirketler tarafından değiştirilebilir; her zaman resmi belgeleri esas al. Sayfada kişisel sunucu bilgisi, şifre veya API anahtarı yoktur.", "pdf": "Ucretsiz_Bulut_ve_GPU_Kurulum_Rehberi.pdf"}, "en": {"title": "Free 12 GB RAM & 30 Weekly GPU Hours Setup Guide", "desc": "Step-by-step setup guide with copy-paste commands for Oracle Cloud Always Free (2 OCPU / 12 GB RAM Arm server) and Kaggle's weekly 30-hour GPU quota. Official free quotas; free PDF download.", "hero": "With official, 100% free quotas: Oracle Cloud Always Free and Kaggle Notebooks. Step-by-step setup with copy-paste commands. Last verified: 22 November 2026.", "nav": ["Map", "Magazine", "Stories", "Quiz", "E-Book", "E · Cloud Guide"], "copy": "Copy", "copied": "Copied ✓", "dl_t": "Downloadable PDF version", "dl_s": "The same guide for offline reading. One click to download.", "dl_b": "⬇ Download PDF", "disc": "This page is for information only. Quotas and terms can be changed by the companies concerned; always rely on the official documentation. This page contains no personal server details, passwords or API keys.", "pdf": "Free_Cloud_and_GPU_Setup_Guide_EN.pdf"}, "es": {"title": "Guía: 12 GB de RAM gratis y 30 horas de GPU a la semana", "desc": "Guía paso a paso con comandos para copiar y pegar para Oracle Cloud Always Free (servidor Arm de 2 OCPU / 12 GB de RAM) y la cuota semanal de 30 horas de GPU de Kaggle. Cuotas oficiales y gratuitas; PDF gratis.", "hero": "Con cuotas oficiales 100 % gratuitas: Oracle Cloud Always Free y Kaggle Notebooks. Instalación paso a paso con comandos para copiar y pegar. Última verificación: 22 de noviembre de 2026.", "nav": ["Mapa", "Magazine", "Stories", "Quiz", "E-Book", "E · Guía Nube"], "copy": "Copiar", "copied": "Copiado ✓", "dl_t": "Versión en PDF descargable", "dl_s": "La misma guía para leer sin conexión. Descárgala con un clic.", "dl_b": "⬇ Descargar PDF", "disc": "Esta página es solo informativa. Las cuotas y condiciones pueden ser modificadas por las empresas correspondientes; guíate siempre por la documentación oficial. La página no contiene datos personales de servidores, contraseñas ni claves de API.", "pdf": "Guia_Gratuita_Nube_y_GPU_ES.pdf"}, "de": {"title": "Einrichtungsanleitung: Kostenlose 12 GB RAM & 30 GPU-Stunden pro Woche", "desc": "Schritt-für-Schritt-Anleitung mit Befehlen zum Kopieren für Oracle Cloud Always Free (Arm-Server mit 2 OCPUs / 12 GB RAM) und Kaggles wöchentliches GPU-Kontingent von 30 Stunden. Offizielle Gratis-Kontingente; kostenloses PDF.", "hero": "Mit offiziellen, 100 % kostenlosen Kontingenten: Oracle Cloud Always Free und Kaggle Notebooks. Schritt-für-Schritt-Einrichtung mit Befehlen zum Kopieren. Zuletzt geprüft: 22. November 2026.", "nav": ["Karte", "Magazine", "Stories", "Quiz", "E-Book", "E · Cloud-Guide"], "copy": "Kopieren", "copied": "Kopiert ✓", "dl_t": "PDF-Version zum Download", "dl_s": "Dieselbe Anleitung zum Offline-Lesen. Mit einem Klick herunterladen.", "dl_b": "⬇ PDF herunterladen", "disc": "Diese Seite dient nur der Information. Kontingente und Bedingungen können von den jeweiligen Unternehmen geändert werden; maßgeblich ist stets die offizielle Dokumentation. Die Seite enthält keine persönlichen Serverdaten, Passwörter oder API-Schlüssel.", "pdf": "Kostenlose_Cloud_und_GPU_Anleitung_DE.pdf"}};
+var LS=['tr','en','es','de'],cur='tr';
+function $(s){return document.querySelector(s)}
+function detect(){
+  try{var q=new URLSearchParams(location.search).get('lang');if(q&&LS.indexOf(q)>-1)return q}catch(e){}
+  try{var s=localStorage.getItem('sd_guide_lang');if(s&&LS.indexOf(s)>-1)return s}catch(e){}
+  var nl=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'en']);
+  for(var i=0;i<nl.length;i++){var c=String(nl[i]).slice(0,2).toLowerCase();if(LS.indexOf(c)>-1)return c}
+  return 'en';
+}
+function setCopy(){document.querySelectorAll('button.cp').forEach(function(b){b.textContent=D[cur].copy})}
+function setLang(l,persist){
+  cur=l;var d=D[l];document.documentElement.lang=l;
+  document.querySelectorAll('.gl').forEach(function(e){e.hidden=e.getAttribute('data-lang')!==l});
+  document.querySelectorAll('#lsw button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-l')===l)});
+  document.querySelectorAll('#mainnav a').forEach(function(a){a.textContent=d.nav[+a.getAttribute('data-n')]});
+  $('#h1').textContent=d.title;$('#hp').textContent=d.hero;$('#dlt').textContent=d.dl_t;$('#dls').textContent=d.dl_s;$('#disc').textContent=d.disc;
+  var b=$('#dlb');b.textContent=d.dl_b;b.setAttribute('href','./downloads/'+d.pdf);b.setAttribute('data-gate-lang',l);
+  document.title=d.title+' | seckinduz';$('#mdesc').setAttribute('content',d.desc);$('#ogt').setAttribute('content',d.title);$('#ogd').setAttribute('content',d.desc);
+  setCopy();
+  if(persist){try{localStorage.setItem('sd_guide_lang',l)}catch(e){}try{var u=new URL(location.href);u.searchParams.set('lang',l);history.replaceState(null,'',u)}catch(e){}}
+}
+document.querySelectorAll('pre').forEach(function(p){var b=document.createElement('button');b.type='button';b.className='cp';b.textContent=D[cur].copy;
+b.onclick=function(){var t=p.querySelector('code').innerText;var done=function(){b.textContent=D[cur].copied;setTimeout(function(){b.textContent=D[cur].copy},1600)};
 if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fb(t);done()})}else{fb(t);done()}};p.appendChild(b)});
 function fb(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
-var bg=document.getElementById('burger'),nv=document.getElementById('mainnav');bg.onclick=function(){var o=nv.classList.toggle('open');bg.setAttribute('aria-expanded',o)};
+document.querySelectorAll('#lsw button').forEach(function(b){b.onclick=function(){setLang(b.getAttribute('data-l'),true)}});
+var bg=$('#burger'),nv=$('#mainnav');bg.onclick=function(){var o=nv.classList.toggle('open');bg.setAttribute('aria-expanded',o)};
+setLang(detect(),false);
+})();
 </script>
 </body></html>
