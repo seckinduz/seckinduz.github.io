@@ -1,6 +1,6 @@
 /* seckinduz.com v2.5 — Dark Editorial Map & Discovery Portal. Vanilla JS + MapLibre GL (globe). */
 const CONFIG = {
-  GOOGLE_CLIENT_ID: "",        // <-- tek satir ayar: Google Cloud Console > OAuth Web Client ID (bos = misafir modu)
+  GOOGLE_CLIENT_ID: (window.SD_CONFIG && window.SD_CONFIG.GOOGLE_CLIENT_ID) || "",        // <-- tek satir ayar: Google Cloud Console > OAuth Web Client ID (bos = misafir modu)
   FIREBASE: null,              // <-- opsiyonel: liderlik/oy icin sunucu eklenirse
   YT_API_KEY: "",              // <-- opsiyonel: bos degilse "En cok izlenenler" canli izlenme ile siralanir
   SITE: "https://seckinduz.com"

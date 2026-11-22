@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ücretsiz 12 GB RAM & Haftalık 30 Saat GPU Kurulum Rehberi | seckinduz</title>
+<meta name="description" content="Oracle Cloud Always Free (2 OCPU / 12 GB RAM Arm sunucu) ve Kaggle haftalık 30 saat GPU kotası için adım adım, kopyala-yapıştır komutlu Türkçe kurulum rehberi. Resmi ve ücretsiz kotalar; ücretsiz PDF.">
+<link rel="canonical" href="https://seckinduz.com/bulut-rehberi.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ücretsiz 12 GB RAM & Haftalık 30 Saat GPU Kurulum Rehberi">
+<meta property="og:description" content="Oracle Cloud Always Free (2 OCPU / 12 GB RAM Arm sunucu) ve Kaggle haftalık 30 saat GPU kotası için adım adım, kopyala-yapıştır komutlu Türkçe kurulum rehberi. Resmi ve ücretsiz kotalar; ücretsiz PDF.">
+<meta property="og:url" content="https://seckinduz.com/bulut-rehberi.html">
+<meta property="og:image" content="https://seckinduz.com/img/logo.png">
+<meta name="theme-color" content="#05080F">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="./v2/img/logo-96.png"><link rel="apple-touch-icon" href="./v2/img/icon-192.png">
+<link rel="stylesheet" href="./v2/css/style.css?v=27">
+<style>
+.guide{max-width:860px;margin:0 auto;padding:0 20px 80px}
+.ghero{padding:54px 20px 30px;text-align:center;background:radial-gradient(ellipse at 50% 0,rgba(0,240,255,.12),transparent 60%)}
+.ghero h1{margin:16px auto 12px;max-width:22ch;font-size:clamp(1.9rem,5vw,3.2rem);line-height:1.1;color:#fff;text-shadow:0 0 30px rgba(0,240,255,.25)}
+.ghero p{max-width:62ch;margin:0 auto 22px;color:var(--mut);font-size:1.05rem}
+.guide h2{margin:44px 0 12px;color:#fff;font-size:1.55rem;border-bottom:1px solid var(--line);padding-bottom:8px}
+.guide h3{margin:26px 0 8px;color:var(--cy);font-size:1.05rem}
+.guide p,.guide li{color:var(--tx)}
+.guide ol,.guide ul{padding-left:1.3rem}
+.guide li{margin:6px 0}
+.trust{border:1px solid rgba(255,158,0,.45);background:rgba(255,158,0,.06);border-radius:var(--r);padding:6px 22px 18px;margin-top:10px}
+.trust h2{border:0;margin-top:16px;color:var(--am);font-size:1.25rem}
+.note{border-left:3px solid var(--cy);padding:8px 14px;background:rgba(0,240,255,.05);border-radius:0 10px 10px 0}
+.guide table{width:100%;border-collapse:collapse;font-size:.9rem;margin:14px 0}
+.guide th,.guide td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.guide th{background:rgba(0,240,255,.08);color:var(--cy)}
+.tblw{overflow-x:auto}
+pre{position:relative;background:#050b14;border:1px solid var(--line);border-radius:12px;padding:16px 14px;overflow-x:auto;margin:10px 0}
+pre code{font-family:var(--fm);font-size:.84rem;color:#d6f7ff;white-space:pre}
+code{font-family:var(--fm);font-size:.88em;background:rgba(0,240,255,.08);padding:1px 6px;border-radius:6px}
+pre code{background:none;padding:0}
+.cp{position:absolute;top:8px;right:8px;font:600 .72rem var(--ff);padding:5px 10px;border-radius:8px;border:1px solid var(--line);background:rgba(0,240,255,.08);color:var(--cy);cursor:pointer}
+.cp:hover{border-color:var(--cy)}
+details{border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0;background:rgba(255,255,255,.02)}
+summary{cursor:pointer;font-weight:600;color:#fff}
+.dl{display:flex;gap:16px;align-items:center;flex-wrap:wrap;border:1px solid var(--line);border-radius:var(--r);padding:16px 20px;margin:0 0 8px;background:linear-gradient(135deg,rgba(0,240,255,.08),rgba(255,158,0,.05))}
+.dl div{flex:1;min-width:220px}.dl b{color:#fff}
+@media(max-width:720px){.mainnav{display:none}.mainnav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#05080F;padding:10px 16px;border-bottom:1px solid var(--line)}.burger{display:flex}.guide table{font-size:.8rem}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Ücretsiz 12 GB RAM & Haftalık 30 Saat GPU Kurulum Rehberi","inLanguage":"tr","url":"https://seckinduz.com/bulut-rehberi.html","dateModified":"2026-11-22","author":{"@type":"Person","name":"seckinduz"}}</script>
+</head>
+<body>
+<header class="site" id="top"><div class="site-in">
+ <a class="logo" href="./" aria-label="seckinduz"><img src="./v2/img/logo-96.png" alt="" width="34" height="34"><span>seckin<b>duz</b></span></a>
+ <nav class="mainnav" id="mainnav" aria-label="Main"><a href="./#map">Harita</a><a href="./#articles">Magazine</a><a href="./#stories">Stories</a><a href="./#quiz-sec">Quiz</a><a href="./#ebook">E-Book</a><a href="./bulut-rehberi.html" aria-current="page">E · Bulut Rehberi</a></nav>
+ <div class="site-r"><button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+</div></header>
+<main>
+<section class="ghero">
+ <span class="pill"><i></i><span class="mono">E · CLOUD &amp; GPU GUIDE</span></span>
+ <h1>Ücretsiz 12 GB RAM & Haftalık 30 Saat GPU Kurulum Rehberi</h1>
+ <p>Resmi, %100 ücretsiz kotalarla: Oracle Cloud Always Free ve Kaggle Notebooks. Kopyala-yapıştır komutlarla adım adım kurulum. Son doğrulama: 22 Kasım 2026.</p>
+</section>
+<article class="guide">
+ <div class="dl"><div><b>İndirilebilir PDF sürümü</b><br><span class="small">Aynı rehber, çevrimdışı okumak için. Tek tıkla indir.</span></div>
+ <a class="btn amber big" href="./downloads/Ucretsiz_Bulut_ve_GPU_Kurulum_Rehberi.pdf" data-pdf-download>⬇ PDF'i indir</a></div>
+ <div class="trust">
+<h2>Önce dürüst olalım: bu rehber neyi, ne kadar ücretsiz veriyor?</h2>
+<p>Burada anlatılan iki sistem de şirketlerin kendi <b>resmi ücretsiz kotalarıdır</b>: <b>Oracle Cloud Always Free</b> ve <b>Kaggle Notebooks haftalık GPU kotası</b>. Gizli abonelik, deneme süresi sonunda otomatik faturalama ya da üçüncü taraf "bedava sunucu" hilesi yoktur. Ama ücretsiz kotaların <b>sınırları</b> vardır ve zamanla değişebilir. Bu yüzden rakamları aşağıda kaynağıyla birlikte yazıyoruz.</p>
+<div class="tblw"><table class="facts">
+<thead><tr><th>Platform</th><th>Ne alıyorsun (resmi belgeye göre)</th><th>Dikkat</th></tr></thead>
+<tbody>
+<tr><td><b>Oracle Cloud Always Free</b></td><td>Arm (Ampere A1) sanal sunucu: toplam <b>2 OCPU ve 12 GB RAM</b> (ayda 1.500 OCPU-saat / 9.000 GB-saat). Ayrıca 2 adet küçük AMD VM (1/8 OCPU, 1 GB RAM) ve toplam 200 GB blok depolama.</td><td>Eskiden bu kota 4 OCPU / 24 GB olarak biliniyordu; Oracle'ın güncel belgesi 2 OCPU / 12 GB yazıyor. Kaynaklar yalnızca <b>home region</b>'da açılır. Boşta kalan sunucu geri alınabilir.</td></tr>
+<tr><td><b>Kaggle Notebooks</b></td><td>Haftada yaklaşık <b>30 saat GPU</b> (T4 ×2 veya P100 seçenekleri) ve ücretsiz CPU oturumları.</td><td>GPU için telefon doğrulaması gerekir. Kota ve oturum süresi Kaggle tarafından değiştirilebilir; güncel değeri hesabındaki kota göstergesinden oku.</td></tr>
+</tbody></table></div>
+<p class="note"><b>Güvenlik sözü:</b> Bu rehberde bize ait hiçbir sunucu IP'si, şifre, SSH anahtarı ya da API anahtarı yoktur. Kodlardaki <code>&lt;SUNUCU_IP&gt;</code> gibi yer tutucuları kendi bilgilerinle değiştirirsin. Kendi anahtarlarını da asla bir sohbete, ekran görüntüsüne ya da herkese açık depoya yapıştırma.</p>
+</div>
+
+<h2 id="oracle">1 · Oracle Cloud Always Free: 12 GB RAM'li Arm sunucu</h2>
+<h3>Adım 1: Hesabı aç</h3>
+<ol>
+<li><a href="https://www.oracle.com/cloud/free/" rel="noopener">oracle.com/cloud/free</a> adresinden kayıt ol. Kayıt sırasında Oracle e-posta, telefon ve ödeme yöntemi gibi doğrulama adımları isteyebilir; hangi adımların istendiği bölgeye ve döneme göre değişir, ekrandaki açıklamayı oku.</li>
+<li><b>Home region</b> seçimini dikkatle yap: Always Free kaynaklar yalnızca bu bölgede açılır ve sonradan değiştirilemez.</li>
+<li>Always Free sınırları içinde kaldığın sürece ücret alınmaz. İstemeden ücretli hesaba (Pay As You Go) geçme.</li>
+</ol>
+
+<h3>Adım 2: SSH anahtarını kendi bilgisayarında üret</h3>
+<p>Terminalde (Windows 10/11 PowerShell, macOS ve Linux'ta aynı komut):</p>
+<pre><code>ssh-keygen -t ed25519 -f ~/.ssh/oracle_free -C "oracle-free"</code></pre>
+<p><code>oracle_free.pub</code> dosyasının içeriğini Oracle konsoluna yapıştıracaksın. <code>oracle_free</code> (uzantısız) dosya <b>özel anahtarındır</b>, kimseyle paylaşma.</p>
+
+<h3>Adım 3: Sanal makineyi oluştur</h3>
+<ol>
+<li>Konsolda <b>Compute → Instances → Create instance</b>.</li>
+<li><b>Image:</b> Canonical Ubuntu 24.04 (aarch64 / Arm).</li>
+<li><b>Shape:</b> Ampere → <code>VM.Standard.A1.Flex</code>, <b>2 OCPU ve 12 GB bellek</b> (Always Free etiketli olmalı).</li>
+<li><b>Boot volume:</b> 50 GB yeterlidir; 200 GB'lık toplam kotanın içinden harcanır.</li>
+<li><b>Add SSH keys:</b> <code>oracle_free.pub</code> içeriğini yapıştır.</li>
+<li>Create'e bas. "Out of host capacity" hatası alırsan bölgede o an boş Arm kapasitesi yok demektir; başka saatte tekrar dene ya da farklı availability domain seç.</li>
+</ol>
+
+<h3>Adım 4: Bağlan ve sistemi güncelle</h3>
+<pre><code>ssh -i ~/.ssh/oracle_free ubuntu@&lt;SUNUCU_IP&gt;
+sudo apt update &amp;&amp; sudo apt -y upgrade
+free -h &amp;&amp; nproc</code></pre>
+<p>Çıktıda yaklaşık 12 GB bellek ve 2 çekirdek görmelisin.</p>
+
+<h3>Adım 5: SSH'ı sertleştir (anahtarla girişin çalıştığını doğruladıktan sonra)</h3>
+<pre><code>sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
+sudo systemctl restart ssh</code></pre>
+
+<h3>Adım 6: Docker kur ve test et</h3>
+<pre><code>curl -fsSL https://get.docker.com | sudo sh
+sudo usermod -aG docker $USER
+newgrp docker
+docker run --rm hello-world</code></pre>
+
+<h3>Adım 7: Bir web servisini yayına al (isteğe bağlı)</h3>
+<pre><code>docker run -d --name web --restart unless-stopped -p 80:80 nginx:alpine
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
+sudo netfilter-persistent save</code></pre>
+<p>Dışarıdan erişim için konsolda <b>VCN → Security List</b> içine 80 numaralı portu gelen trafik için de eklemen gerekir.</p>
+
+<h3>Boşta kalma uyarısı</h3>
+<p>Oracle belgesine göre 7 günlük sürede CPU kullanımının 95. yüzdelik değeri %20'nin altındaysa, ağ kullanımı %20'nin altındaysa ve (A1 için) bellek kullanımı %20'nin altındaysa, sunucu boşta sayılıp <b>geri alınabilir</b>. Sunucuyu gerçekten kullanacağın bir iş için aç; yapay yük üretme numaralarına güvenme.</p>
+
+<h2 id="kaggle">2 · Kaggle: haftalık 30 saat GPU</h2>
+<h3>Adım 1: Hesabı aç ve telefonunu doğrula</h3>
+<ol>
+<li><a href="https://www.kaggle.com/" rel="noopener">kaggle.com</a> adresinde ücretsiz hesap aç.</li>
+<li><b>Settings → Phone Verification</b> bölümünden telefonunu doğrula. Bu yapılmadan GPU ve internet erişimi açılmaz.</li>
+</ol>
+
+<h3>Adım 2: GPU'lu not defteri başlat</h3>
+<ol>
+<li><b>Create → New Notebook</b>.</li>
+<li>Sağ panelde <b>Session options → Accelerator</b>: <code>GPU T4 ×2</code> veya <code>GPU P100</code>.</li>
+<li>Kalan kotanı profilindeki ya da notebook'taki kota göstergesinden izle. Oturumu kullanmadığında <b>Stop session</b> ile kapat; açık kalan oturum da kotadan yer.</li>
+</ol>
+
+<h3>Adım 3: GPU'yu doğrula</h3>
+<pre><code>!nvidia-smi</code></pre>
+<pre><code>import torch
+print("CUDA:", torch.cuda.is_available(), "| GPU sayısı:", torch.cuda.device_count())
+for i in range(torch.cuda.device_count()):
+    print(i, torch.cuda.get_device_name(i))</code></pre>
+
+<h3>Adım 4: Hızlı performans testi</h3>
+<pre><code>import time, torch
+x = torch.randn(8192, 8192, device="cuda", dtype=torch.float16)
+torch.cuda.synchronize(); t = time.time()
+for _ in range(20):
+    y = x @ x
+torch.cuda.synchronize()
+print("20 matris çarpımı:", round(time.time() - t, 2), "sn")</code></pre>
+
+<h3>Adım 5: Kütüphane kur ve çıktıyı kaydet</h3>
+<pre><code>!pip -q install transformers accelerate</code></pre>
+<p>Kalıcı olmasını istediğin dosyaları <code>/kaggle/working/</code> klasörüne yaz; oturum kapanınca diğer dosyalar silinir.</p>
+
+<h3>Adım 6: Gizli anahtarları doğru sakla</h3>
+<p>Bir servis anahtarı (ör. model indirme token'ı) gerekiyorsa kodun içine yazma. Notebook'ta <b>Add-ons → Secrets</b> bölümüne ekle ve şöyle oku:</p>
+<pre><code>from kaggle_secrets import UserSecretsClient
+token = UserSecretsClient().get_secret("HF_TOKEN")</code></pre>
+<p>Not defterini herkese açık paylaşmadan önce çıktılarında anahtar kalıp kalmadığını kontrol et.</p>
+
+<h2 id="sss">3 · Sık sorulanlar</h2>
+<details><summary>Gerçekten tamamen ücretsiz mi?</summary><p>Oracle Always Free kaynaklarını ve Kaggle'ın ücretsiz kotasını belgelerdeki sınırlar içinde kullandığın sürece ücret yoktur. Limit üstü kullanım ya da kendi isteğinle ücretli hesaba geçiş ücret doğurabilir.</p></details>
+<details><summary>Neden 24 GB değil de 12 GB yazıyor?</summary><p>Oracle'ın güncel resmi belgesi Always Free Ampere A1 için toplam 2 OCPU ve 12 GB bellek yazıyor. Eski 4 OCPU / 24 GB değerini hâlâ görebileceğin eski yazılar güncel değil.</p></details>
+<details><summary>Kota değişirse?</summary><p>Aşağıdaki resmi kaynakları kontrol et. Bu rehber son olarak 22 Kasım 2026'da doğrulandı.</p></details>
+
+<h2 id="kaynaklar">Resmi kaynaklar</h2>
+<ul>
+<li><a href="https://docs.oracle.com/en-us/iaas/Content/FreeTier/resourceref.htm" rel="noopener">Oracle: Always Free Resources</a></li>
+<li><a href="https://www.kaggle.com/docs/notebooks" rel="noopener">Kaggle: Notebooks dokümantasyonu</a></li>
+</ul>
+
+ <p class="small" style="margin-top:34px">Bu sayfa bilgilendirme amaçlıdır. Kotalar ve koşullar ilgili şirketler tarafından değiştirilebilir; her zaman resmi belgeleri esas al. Sayfada kişisel sunucu bilgisi, şifre veya API anahtarı yoktur.</p>
+</article>
+</main>
+<footer class="site-foot"><div class="wrap"><p><a href="https://www.youtube.com/@seckinduz" rel="noopener">YouTube</a> · <a href="https://beacons.ai/seckinduz" rel="noopener">beacons.ai/seckinduz</a> · <a href="./about.html">About</a> · <a href="./privacy.html">Privacy</a> · <a href="./contact.html">Contact</a></p><p class="small">© seckinduz</p></div></footer>
+<script src="./v2/js/sdconfig.js?v=28"></script><script src="./v2/js/pdfgate.js?v=28"></script>
+<script>
+document.querySelectorAll('pre').forEach(function(p){var b=document.createElement('button');b.type='button';b.className='cp';b.textContent='Kopyala';
+b.onclick=function(){var t=p.querySelector('code').innerText;var done=function(){b.textContent='Kopyalandı ✓';setTimeout(function(){b.textContent='Kopyala'},1600)};
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fb(t);done()})}else{fb(t);done()}};p.appendChild(b)});
+function fb(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+var bg=document.getElementById('burger'),nv=document.getElementById('mainnav');bg.onclick=function(){var o=nv.classList.toggle('open');bg.setAttribute('aria-expanded',o)};
+</script>
+</body></html>
