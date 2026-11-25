@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kendi Bilgisayarında Ücretsiz Yapay Zekâ: Ollama Kurulum Rehberi | seckinduz</title>
+<meta name="description" content="Ollama ile yapay zekâ modellerini kendi bilgisayarında çalıştır: Windows, macOS ve Linux için adım adım, kopyala-yapıştır komutlu Türkçe kurulum rehberi. Model indikten sonra internet gerekmez, abonelik yok.">
+<link rel="canonical" href="https://seckinduz.com/ollama-rehberi.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kendi Bilgisayarında Ücretsiz Yapay Zekâ: Ollama Kurulum Rehberi">
+<meta property="og:description" content="Ollama ile yapay zekâ modellerini kendi bilgisayarında çalıştır: adım adım, kopyala-yapıştır komutlu Türkçe kurulum rehberi. Abonelik yok.">
+<meta property="og:url" content="https://seckinduz.com/ollama-rehberi.html">
+<meta property="og:image" content="https://seckinduz.com/img/logo.png">
+<meta name="theme-color" content="#05080F">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="./v2/img/logo-96.png"><link rel="apple-touch-icon" href="./v2/img/icon-192.png">
+<link rel="stylesheet" href="./v2/css/style.css?v=27">
+<style>
+.guide{max-width:860px;margin:0 auto;padding:0 20px 80px}
+.ghero{padding:54px 20px 30px;text-align:center;background:radial-gradient(ellipse at 50% 0,rgba(0,240,255,.12),transparent 60%)}
+.ghero h1{margin:16px auto 12px;max-width:22ch;font-size:clamp(1.9rem,5vw,3.2rem);line-height:1.1;color:#fff;text-shadow:0 0 30px rgba(0,240,255,.25)}
+.ghero p{max-width:62ch;margin:0 auto 22px;color:var(--mut);font-size:1.05rem}
+.guide h2{margin:44px 0 12px;color:#fff;font-size:1.55rem;border-bottom:1px solid var(--line);padding-bottom:8px}
+.guide h3{margin:26px 0 8px;color:var(--cy);font-size:1.05rem}
+.guide p,.guide li{color:var(--tx)}
+.guide ol,.guide ul{padding-left:1.3rem}
+.guide li{margin:6px 0}
+.trust{border:1px solid rgba(255,158,0,.45);background:rgba(255,158,0,.06);border-radius:var(--r);padding:6px 22px 18px;margin-top:10px}
+.trust h2{border:0;margin-top:16px;color:var(--am);font-size:1.25rem}
+.note{border-left:3px solid var(--cy);padding:8px 14px;background:rgba(0,240,255,.05);border-radius:0 10px 10px 0}
+.guide table{width:100%;border-collapse:collapse;font-size:.9rem;margin:14px 0}
+.guide th,.guide td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.guide th{background:rgba(0,240,255,.08);color:var(--cy)}
+.tblw{overflow-x:auto}
+pre{position:relative;background:#050b14;border:1px solid var(--line);border-radius:12px;padding:16px 14px;overflow-x:auto;margin:10px 0}
+pre code{font-family:var(--fm);font-size:.84rem;color:#d6f7ff;white-space:pre}
+code{font-family:var(--fm);font-size:.88em;background:rgba(0,240,255,.08);padding:1px 6px;border-radius:6px}
+pre code{background:none;padding:0}
+.cp{position:absolute;top:8px;right:8px;font:600 .72rem var(--ff);padding:5px 10px;border-radius:8px;border:1px solid var(--line);background:rgba(0,240,255,.08);color:var(--cy);cursor:pointer}
+.cp:hover{border-color:var(--cy)}
+details{border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0;background:rgba(255,255,255,.02)}
+summary{cursor:pointer;font-weight:600;color:#fff}
+.dl{display:flex;gap:16px;align-items:center;flex-wrap:wrap;border:1px solid var(--line);border-radius:var(--r);padding:16px 20px;margin:0 0 8px;background:linear-gradient(135deg,rgba(0,240,255,.08),rgba(255,158,0,.05))}
+.dl div{flex:1;min-width:220px}.dl b{color:#fff}
+.kw{display:inline-block;font:700 1rem var(--fm);color:#1a1033;background:#FFD60A;border-radius:8px;padding:2px 10px;margin:0 2px}
+@media(max-width:720px){.mainnav{display:none}.mainnav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#05080F;padding:10px 16px;border-bottom:1px solid var(--line)}.burger{display:flex}.guide table{font-size:.8rem}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Kendi Bilgisayarında Ücretsiz Yapay Zekâ: Ollama Kurulum Rehberi","inLanguage":"tr","url":"https://seckinduz.com/ollama-rehberi.html","dateModified":"2026-11-25","author":{"@type":"Person","name":"seckinduz"}}</script>
+</head>
+<body>
+<header class="site" id="top"><div class="site-in">
+ <a class="logo" href="./" aria-label="seckinduz"><img src="./v2/img/logo-96.png" alt="" width="34" height="34"><span>seckin<b>duz</b></span></a>
+ <nav class="mainnav" id="mainnav" aria-label="Main"><a href="./#map">Harita</a><a href="./#articles">Magazine</a><a href="./#stories">Stories</a><a href="./#quiz-sec">Quiz</a><a href="./#ebook">E-Book</a><a href="./bulut-rehberi.html">E · Bulut Rehberi</a><a href="./ollama-rehberi.html" aria-current="page">E · Ollama Rehberi</a></nav>
+ <div class="site-r"><button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+</div></header>
+<main>
+<section class="ghero" id="ollama">
+ <span class="pill"><i></i><span class="mono">E · LOCAL AI GUIDE</span></span>
+ <h1>Kendi Bilgisayarında Ücretsiz Yapay Zekâ: Ollama Kurulum Rehberi</h1>
+ <p>Windows, macOS ve Linux için adım adım, kopyala-yapıştır komutlarla. Model indikten sonra internet gerekmez, abonelik yoktur. Hazırlanma: 25 Kasım 2026.</p>
+</section>
+<article class="guide" id="yerel">
+ <div class="dl"><div><b>Videodan geldiysen</b><br><span class="small">Instagram Reels yorumuna <span class="kw">YEREL</span> ya da <span class="kw">OLLAMA</span> yazınca bu sayfanın linki DM'ine gelir. YouTube'da link açıklamada ve sabit yorumdadır.</span></div></div>
+
+<div class="trust">
+<h2>Önce dürüst olalım: "ücretsiz" ne demek, sınırı ne?</h2>
+<p><b>Ollama</b>, açık ağırlıklı (open-weight) yapay zekâ modellerini kendi bilgisayarında çalıştıran ücretsiz bir programdır. Ne ücretsiz: program ve birçok model dosyası için abonelik ya da kullanım başına ücret yok. Ne ücretsiz değil: <b>senin bilgisayarın, elektriği ve diskin</b>. Her modelin kendi lisansı vardır; kullanmadan önce model sayfasındaki lisansı oku.</p>
+<div class="tblw"><table>
+<thead><tr><th>Konu</th><th>Gerçek durum</th></tr></thead>
+<tbody>
+<tr><td><b>Güç</b></td><td>Küçük yerel modeller sohbet, özetleme, metin düzeltme ve basit kod yardımı için işe yarar. En büyük bulut modelleri kadar güçlü <b>değildir</b>.</td></tr>
+<tr><td><b>Hız</b></td><td>Tamamen donanımına bağlıdır: RAM, işlemci ve (varsa) ekran kartı. Ekran kartı desteklenmiyorsa model işlemcide çalışır ve daha yavaş olur.</td></tr>
+<tr><td><b>İnternet</b></td><td>Programı ve modeli indirirken gerekir. Model indikten sonra sohbet için gerekmez.</td></tr>
+<tr><td><b>Veri</b></td><td>Yerel modelde yazdıkların bilgisayarında kalır. Ollama'nın isteğe bağlı bulut özellikleri ayrı koşullara tabidir; bu rehber yalnızca yerel modelleri anlatır.</td></tr>
+</tbody></table></div>
+<p class="note"><b>Not:</b> Komut ve model adları zamanla değişebilir. Takıldığında resmi sayfaları kontrol et: <a href="https://ollama.com/library" rel="noopener">ollama.com/library</a> ve <a href="https://github.com/ollama/ollama" rel="noopener">github.com/ollama/ollama</a>. Model boyutları aşağıda yaklaşık verilmiştir.</p>
+</div>
+
+<h2>1 · Bilgisayarın hangi modele yeter?</h2>
+<p>Basit kural: modelin dosya boyutu kadar boş RAM'e (ya da ekran kartı belleğine) ek olarak sistem için birkaç GB pay lazım. Emin değilsen küçükten başla.</p>
+<div class="tblw"><table>
+<thead><tr><th>RAM</th><th>Başlangıç için model</th><th>Yaklaşık boyut</th></tr></thead>
+<tbody>
+<tr><td>4 GB</td><td><code>llama3.2:1b</code></td><td>~1,3 GB</td></tr>
+<tr><td>8 GB</td><td><code>llama3.2</code> (3B)</td><td>~2 GB</td></tr>
+<tr><td>8–16 GB</td><td><code>gemma3:4b</code></td><td>~3,3 GB</td></tr>
+<tr><td>16 GB ve üstü</td><td><code>llama3.1:8b</code></td><td>~4,9 GB</td></tr>
+</tbody></table></div>
+<p class="small">Hangi modelin ne kadar yer kapladığını <a href="https://ollama.com/library" rel="noopener">ollama.com/library</a> sayfasında model adının altındaki etiketlerden (tags) görebilirsin.</p>
+
+<h2>2 · Ollama'yı kur</h2>
+<h3>Windows</h3>
+<ol>
+<li><a href="https://ollama.com/download" rel="noopener">ollama.com/download</a> sayfasından Windows kurulum dosyasını indir ve çalıştır.</li>
+<li>Kurulum bitince yeni bir PowerShell penceresi aç ve kontrol et:</li>
+</ol>
+<pre><code>ollama --version</code></pre>
+<h3>macOS</h3>
+<p>Aynı sayfadan macOS uygulamasını indir ya da Homebrew kullanıyorsan:</p>
+<pre><code>brew install ollama</code></pre>
+<h3>Linux</h3>
+<pre><code>curl -fsSL https://ollama.com/install.sh | sh
+ollama --version</code></pre>
+<p class="small">Kurulum betiğini çalıştırmadan önce içeriğini görmek istersen adresi tarayıcıda açıp oku. Bir betiği körlemesine çalıştırma alışkanlığı edinme.</p>
+
+<h2>3 · İlk modelini çalıştır</h2>
+<pre><code>ollama run llama3.2</code></pre>
+<p>İlk çalıştırmada model indirilir (internet gerekir), sonra sohbet başlar. Bir şey yazıp Enter'a bas. Çıkmak için:</p>
+<pre><code>/bye</code></pre>
+<p>Model bir kez indikten sonra aynı komut internet olmadan çalışır. Denemek için Wi-Fi'ı kapatıp komutu tekrar çalıştırabilirsin.</p>
+
+<h2>4 · Sık kullanılan komutlar</h2>
+<pre><code>ollama list              # indirdiğin modeller
+ollama pull gemma3:4b    # indir, çalıştırma
+ollama run gemma3:4b     # çalıştır (yoksa önce indirir)
+ollama ps                # şu an bellekte yüklü modeller
+ollama rm llama3.2       # modeli sil, yer aç</code></pre>
+
+<h2>5 · Kendi programından kullan (yerel API)</h2>
+<p>Ollama çalışırken bilgisayarında <code>11434</code> numaralı portta bir API açar. macOS/Linux terminalinde:</p>
+<pre><code>curl http://localhost:11434/api/generate -d '{"model":"llama3.2","prompt":"Merhaba, kendini tanıt.","stream":false}'</code></pre>
+<p>Windows PowerShell'de:</p>
+<pre><code>Invoke-RestMethod -Uri http://localhost:11434/api/generate -Method Post -ContentType "application/json" -Body '{"model":"llama3.2","prompt":"Merhaba, kendini tanıt.","stream":false}'</code></pre>
+<p class="note"><b>Güvenlik:</b> API varsayılan olarak yalnızca senin bilgisayarından erişilebilir. Güvenlik duvarı ve kimlik doğrulaması olmadan internete açma.</p>
+
+<h2>6 · Sorun giderme</h2>
+<details><summary>Model çok yavaş cevap veriyor</summary><p>Daha küçük bir model dene (örn. <code>llama3.2:1b</code>). Diğer ağır programları kapat. Hız büyük ölçüde donanıma bağlıdır; ekran kartın desteklenmiyorsa model işlemcide çalışır.</p></details>
+<details><summary>"Yeterli bellek yok" benzeri hata alıyorum</summary><p>Seçtiğin model RAM'ine göre büyük. Tablodaki bir alt basamağa in ya da <code>ollama ps</code> ile bellekte yüklü başka model olup olmadığına bak.</p></details>
+<details><summary>Modeller diskte nerede duruyor, nasıl yer açarım?</summary><p>Genellikle kullanıcı klasörünün altındaki <code>.ollama/models</code> dizininde durur. Yer açmak için kullanmadığın modelleri <code>ollama rm &lt;model&gt;</code> ile sil.</p></details>
+<details><summary>Gerçekten tamamen ücretsiz mi?</summary><p>Program ve birçok model için lisans ücreti yok; maliyet kendi donanımın ve elektriğindir. Her modelin lisansı farklıdır, kullanmadan önce kontrol et. Ollama'nın bulut özellikleri ayrı bir konudur ve bu rehberin kapsamı dışındadır.</p></details>
+<details><summary>ChatGPT ya da Claude yerine geçer mi?</summary><p>Genel olarak hayır. En büyük bulut modelleri daha güçlüdür. Yerel modeller gizlilik, çevrimdışı kullanım ve düşük maliyet istediğin sohbet, özet ve basit kod işleri için iyi bir tamamlayıcıdır.</p></details>
+
+<h2>Resmi kaynaklar</h2>
+<ul>
+<li><a href="https://ollama.com/download" rel="noopener">Ollama: İndirme sayfası</a></li>
+<li><a href="https://ollama.com/library" rel="noopener">Ollama: Model kütüphanesi</a></li>
+<li><a href="https://github.com/ollama/ollama" rel="noopener">Ollama: GitHub deposu ve belgeler</a></li>
+</ul>
+
+ <p class="small" style="margin-top:34px">Bu sayfa bilgilendirme amaçlıdır. Komutlar, model adları ve boyutları değişebilir; her zaman resmi belgeleri esas al. Sayfada kişisel sunucu bilgisi, şifre veya API anahtarı yoktur.</p>
+</article>
+</main>
+<footer class="site-foot"><div class="wrap"><p><a href="https://www.youtube.com/@seckinduz" rel="noopener">YouTube</a> · <a href="https://beacons.ai/seckinduz" rel="noopener">beacons.ai/seckinduz</a> · <a href="./about.html">About</a> · <a href="./privacy.html">Privacy</a> · <a href="./contact.html">Contact</a></p><p class="small">© seckinduz</p></div></footer>
+<script>
+(function(){
+function fb(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+document.querySelectorAll('pre').forEach(function(p){var b=document.createElement('button');b.type='button';b.className='cp';b.textContent='Kopyala';
+b.onclick=function(){var t=p.querySelector('code').innerText;var done=function(){b.textContent='Kopyalandı ✓';setTimeout(function(){b.textContent='Kopyala'},1600)};
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fb(t);done()})}else{fb(t);done()}};p.appendChild(b)});
+var bg=document.getElementById('burger'),nv=document.getElementById('mainnav');bg.onclick=function(){var o=nv.classList.toggle('open');bg.setAttribute('aria-expanded',o)};
+})();
+</script>
+</body>
+</html>
